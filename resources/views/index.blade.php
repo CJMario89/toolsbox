@@ -5,7 +5,9 @@
 @endsection
 
 @section('content')
-    
+    <div class="temp">
+        temp
+    </div>
 @endsection
 
 @section('js')

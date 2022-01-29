@@ -12,3 +12,7 @@ body{
     margin: 0 auto;
     background-color: #ffffff;
 }
+p{
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+}
