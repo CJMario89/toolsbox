@@ -16,3 +16,28 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('simpleCalculator', function () {
+    return view('simpleCalculator');
+});
+
+Route::get('positionalConvert', function () {
+    return view('positionalConvert');
+});
+
+Route::get('lengthConvert', function () {
+    return view('lengthConvert');
+});
+
+Route::get('weightConvert', function () {
+    return view('weightConvert');
+});
+
+Route::get('exchangeRateConvert', function () {
+    return view('exchangeRateConvert');
+});
+
+
+Route::get('hash', function () {
+    return view('hash');
+});
