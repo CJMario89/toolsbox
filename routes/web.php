@@ -41,3 +41,12 @@ Route::get('exchangeRateConvert', function () {
 Route::get('hash', function () {
     return view('hash');
 });
+Route::get('endecode', function () {
+    return view('endecode');
+});
+Route::get('hmacHash', function () {
+    return view('hmacHash');
+});
+Route::get('endecrypt', function () {
+    return view('endecrypt');
+});

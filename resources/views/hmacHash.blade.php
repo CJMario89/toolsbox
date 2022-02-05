@@ -1,47 +1,50 @@
 @extends('layouts.app')
 
 @section('head')
-    <link rel="stylesheet" href="{{asset('css/hash.css')}}">
-    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js"></script>   
+    <link rel="stylesheet" href="{{asset('css/hmacHash.css')}}">
+    <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js"></script>
     <embed class="license" src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/LICENSE">
 @endsection
 
 @section('content')
     <div class="container">
         <div class="tool">
-            <textarea class="inputBlock from" type="text" placeholder="輸入"></textarea>
-            <div class="borderLR borderLRHover">
-                <div id="sha256" class="otherContainer borderTB borderTBHover">
+            <div class="inputBlockContainer">
+                <textarea class="inputBlock from" type="text" placeholder="輸入"></textarea>
+                <textarea class="key" type="text" placeholder="密鑰"></textarea>
+            </div>
+            <div class="borderLR borderLRHover method">
+                <div id="hmacsha256" class="otherContainer borderTB borderTBHover">
                     <div class="otherOptionSelected">
-                        sha256
+                        Hmac-sha256
                     </div>
                     <svg id="chevron-down" width="14" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
                         <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z "></path>
                     </svg>
                     <div class="otherOptionContainer">
-                        <div id="md5" class="otherOption">
-                            md5
+                        <div id="hmacmd5" class="otherOption">
+                            Hmac-md5
                         </div>
-                        <div id="sha1" class="otherOption">
-                            sha1
+                        <div id="hmacsha1" class="otherOption">
+                            Hmac-sha1
                         </div>
-                        <div id="sha256" class="otherOption">
-                            sha256
+                        <div id="hmacsha256" class="otherOption">
+                            Hmac-sha256
                         </div>
-                        <div id="sha224" class="otherOption">
-                            sha224
+                        <div id="hmacsha224" class="otherOption">
+                            Hmac-sha224
                         </div>
-                        <div id="sha512" class="otherOption">
-                            sha512
+                        <div id="hmacsha512" class="otherOption">
+                            Hmac-sha512
                         </div>
-                        <div id="sha384" class="otherOption">
-                            sha384
+                        <div id="hmacsha384" class="otherOption">
+                            Hmac-sha384
                         </div>
-                        <div id="sha3" class="otherOption">
-                            sha3
+                        <div id="hmacsha3" class="otherOption">
+                            Hmac-sha3
                         </div>
-                        <div id="ripemd160" class="otherOption">
-                            ripemd160
+                        <div id="hmacripemd160" class="otherOption">
+                            Hmac-ripemd160
                         </div>
                     </div>
                 </div>
@@ -52,7 +55,7 @@
             <textarea class="inputBlock to" type="text" placeholder="結果" readonly></textarea>
         </div>
          <div class="title">
-            雜湊(hash)
+            Hmac雜湊(Hmac-hash)
         </div>
 
         <div class="description">
@@ -61,5 +64,5 @@
 @endsection
 
 @section('js')
-    @include('js.hash')
+    @include('js.hmacHash')
 @endsection

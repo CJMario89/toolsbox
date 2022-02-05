@@ -187,7 +187,6 @@
                             //wait
                             waitNum = numStack[ni - 1];
                             waitOperator = operatorStack[oi];
-                            console.log(waitOperator+"@"+waitNum);
                             oi++;
                             ni++;
                         }
@@ -213,7 +212,6 @@
                         //wait
                         waitNum = numStack[ni - 1];
                         waitOperator = operatorStack[oi];
-                        console.log(waitOperator+"@"+waitNum);
                         oi++;
                         ni++;
                     }

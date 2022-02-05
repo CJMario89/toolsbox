@@ -1,5 +1,4 @@
 <script>
-
     var input = document.querySelector("textarea");
     input.focus();
 
@@ -13,6 +12,7 @@
             e.stopPropagation();
         });
     }
+
 
     var otherContainers = document.querySelectorAll(".otherContainer");
     for(var i = 0; i < otherContainers.length; i++){
@@ -41,28 +41,39 @@
     }
     
 
-    function convertUnit(value, method) {
-        if(method == 'md5'){
-            return CryptoJS.MD5(value);
-        }else if(method == 'sha1'){
-            return CryptoJS.SHA1(value);
-        }else if(method == 'sha256'){
-            return CryptoJS.SHA256(value);
-        }else if(method == 'sha224'){
-            return CryptoJS.SHA224(value);
-        }else if(method == 'sha512'){
-            return CryptoJS.SHA512(value);
-        }else if(method == 'sha384'){
-            return CryptoJS.SHA384(value);
-        }else if(method == 'sha3'){
-            return CryptoJS.SHA3(value);
-        }else if(method == 'ripemd160'){
-            return CryptoJS.RIPEMD160(value);         
+    function convertUnit(value, method, secret) {
+        if(method == 'hmacmd5'){
+            return CryptoJS.HmacMD5(value, secret);
+        }else if(method == 'hmacsha1'){
+            return CryptoJS.HmacSHA1(value, secret);
+        }else if(method == 'hmacsha256'){
+            return CryptoJS.HmacSHA256(value, secret);
+        }else if(method == 'hmacsha224'){
+            return CryptoJS.HmacSHA224(value, secret);
+        }else if(method == 'hmacsha512'){
+            return CryptoJS.HmacSHA512(value, secret);
+        }else if(method == 'hmacsha384'){
+            return CryptoJS.HmacSHA384(value, secret);
+        }else if(method == 'hmacsha3'){
+            return CryptoJS.HmacSHA3(value, secret);
+        }else if(method == 'hmacripemd160'){
+            return CryptoJS.HmacRIPEMD160(value, secret);
         }
     }
 
+    function htmlencrypt(value){
+        var div = document.createElement('div');
+        div.appendChild(document.createTextNode(value));
+        return div.innerHTML;
+    }
+    function htmldecrypt(value){
+        var div = document.createElement('div');
+        div.innerHTML = value;
+        return div.innerText || div.textContent;
+    }
+
     function addWrongTag(){
-        from.closest(".from").classList.add("wrongInput");
+        from.closest(".tool").classList.add("wrongInput");
     }
 
     var from = document.querySelector(".from");
@@ -70,26 +81,30 @@
     var method = document.querySelector(".otherContainer").id;
     var flag = 0;
     var carry = 0;
+    var key = document.querySelector(".key");
 
+    key.addEventListener("input", function(e){inputChange(1,e)});
 
     //init
 
     from.addEventListener("input", function(e){inputChange(1, e)});
 
     function inputChange(arg, e){
-        from.closest(".from").classList.remove("wrongInput");
-        method = document.querySelector(".borderTBHover").id;
+        from.closest(".tool").classList.remove("wrongInput");
+        method = document.querySelector(".otherContainer").id;
         if(arg == 1){
             if(flag == 0){
                 input.removeAttribute("placeholder");
+                key.removeAttribute("placeholder");
                 flag = 1;
             }
-            to.value = convertUnit(from.value, method);
+            to.value = convertUnit(from.value, method, key.value);
         }else if(arg == 2){
             if(flag == 1){
-                to.value = convertUnit(from.value, method);
+                to.value = convertUnit(from.value, method, key.value);
             }
         }
     }
+
 
 </script>

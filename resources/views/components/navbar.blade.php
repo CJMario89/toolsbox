@@ -36,8 +36,8 @@
                 </div>
             </div>
             <div class="menuSubOptionContainer">
-                <div class="menuSubOption">
-                    <div class="subOptionText simpleCalculator">
+                <div class="menuSubOption simpleCalculator">
+                    <div class="subOptionText">
                         簡易計算機
                     </div>
                 </div>
@@ -58,23 +58,23 @@
                 </div>
             </div>
             <div class="menuSubOptionContainer">
-                <div class="menuSubOption">
-                    <div class="subOptionText lengthConvert">
+                <div class="menuSubOption lengthConvert">
+                    <div class="subOptionText">
                         長度換算
                     </div>
                 </div>
-                <div class="menuSubOption">
-                    <div class="subOptionText weightConvert">
+                <div class="menuSubOption weightConvert">
+                    <div class="subOptionText">
                         重量換算
                     </div>
                 </div>
-                <div class="menuSubOption">
-                    <div class="subOptionText exchangeRateConvert">
+                <div class="menuSubOption exchangeRateConvert">
+                    <div class="subOptionText">
                         匯率換算
                     </div>
                 </div>
-                <div class="menuSubOption">
-                    <div class="subOptionText positionalConvert">
+                <div class="menuSubOption  positionalConvert">
+                    <div class="subOptionText">
                         進位轉換
                     </div>
                 </div>
@@ -96,17 +96,22 @@
                 </div>
             </div>
             <div class="menuSubOptionContainer">
-                <div class="menuSubOption">
-                    <div class="subOptionText hash">
+                <div class="menuSubOption hash">
+                    <div class="subOptionText">
                         雜湊(hash)
                     </div>
                 </div>
-                <div class="menuSubOption">
+                <div class="menuSubOption hmacHash">
+                    <div class="subOptionText">
+                        Hmac雜湊(Hmac-hash)
+                    </div>
+                </div>
+                <div class="menuSubOption endecrypt">
                     <div class="subOptionText">
                         加密解密(en/decrypt)
                     </div>
                 </div>
-                <div class="menuSubOption">
+                <div class="menuSubOption endecode">
                     <div class="subOptionText">
                         編碼解碼(en/decode)
                     </div>

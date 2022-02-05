@@ -163,4 +163,23 @@
         e.stopPropagation();
     });
 
+    var hash = document.querySelector(".hmacHash");
+    hash.addEventListener("click", function(e){
+        window.location = "{{url('hmacHash')}}";
+        e.stopPropagation();
+    });
+
+    var endecode = document.querySelector(".endecode");
+    endecode.addEventListener("click", function(e){
+        window.location = "{{url('endecode')}}";
+        e.stopPropagation();
+    });
+
+    var endecrypt = document.querySelector(".endecrypt");
+    endecrypt.addEventListener("click", function(e){
+        window.location = "{{url('endecrypt')}}";
+        e.stopPropagation();
+    });
+
+
 </script>

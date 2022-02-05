@@ -76,6 +76,16 @@
     visibility: visible !important;
     transform: translateX(0px) !important;
 }
+.license{
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    height: 0px;
+    width: 0px;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
 
 @media screen and (max-width: 3000px){
     .menuButton{
@@ -223,6 +233,9 @@
         width: 100%;
         margin-top: 0px;
         margin-left: 0px;
+    }
+    .menuSubOption:hover{
+        text-shadow: 0px 0px 10px #636363;
     }
     .showMobileSubOption{
         opacity: 1;
