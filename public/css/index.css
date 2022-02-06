@@ -18,6 +18,9 @@
     transform: scale(1.5);
     transform-origin: center;
 }
+.cubic{
+    display: block;
+}
 .index svg{
     -moz-animation: cubicRotation 40s linear infinite;
     -o-animation: cubicRotation 40s linear infinite;
