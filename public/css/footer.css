@@ -11,6 +11,8 @@
 .footer p{
     color: #636363;
     text-align: center;
+    font-size: 12px;
+    margin-top: 10px;
 }
 #contact{
     position: absolute;
