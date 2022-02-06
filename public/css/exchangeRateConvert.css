@@ -94,7 +94,7 @@
 .otherContainer svg{
     position: absolute;
     right: 6px;
-    bottom: 4px;
+    bottom: 5px;
 }
 .other{
     position: absolute;
@@ -320,7 +320,7 @@
         margin-left: 17px;
     }
     .tool{
-        width: 310px;
+        width: 325px;
         height: 450px;
         font-size: 16px;
     }

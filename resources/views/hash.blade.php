@@ -56,6 +56,9 @@
         </div>
 
         <div class="description">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;雜湊是一種單向不可逆的函式，常用於保護儲存於資料庫的密碼，藉由雜湊使密碼變成另一串有關連的字串，儲存於資料庫，因為函式不可逆，所以有人看到了資料庫的密碼也沒事。
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;根據雜湊方式及雜湊值長度有不同的選項。
         </div>
     </div>
 @endsection
