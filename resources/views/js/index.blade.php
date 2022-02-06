@@ -5,7 +5,7 @@
             cubicSvg.style.animationPlayState = "paused";
         });
         cubicSvg.addEventListener("touchstart", function(){
-            cubicSvg.style.animationPlayState = "running";
+            cubicSvg.style.animationPlayState = "paused";
         });
         cubicSvg.addEventListener("touchend", function(){
             cubicSvg.style.animationPlayState = 'running';
