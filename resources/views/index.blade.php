@@ -19,7 +19,7 @@
             <div class="why">
                 提供許多方便實用的工具
                 <br>
-                網站就是個箱子
+                網站是箱子
             </div>
             <div class="what">
                 線上實用的工具箱
