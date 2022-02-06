@@ -69,5 +69,13 @@
             what.classList.remove("hideWhat");
         }
     });
+    if(window.innerWidth < 768){
+        window.addEventListener("tochstart", function(e){
+        if(!e.target.closest(".whyToolsbox")){
+            why.classList.remove("showWhy");
+            what.classList.remove("hideWhat");
+        }
+    });
+    }
     
 </script> 
