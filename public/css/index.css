@@ -27,16 +27,19 @@
     -ms-animation: cubicRotation 40s linear infinite;
     -webkit-animation: cubicRotation 40s linear infinite;
     animation: cubicRotation 40s linear infinite;
-    color: white;
+    color: black;
     animation-direction: alternate;
 }
 @keyframes cubicRotation{
     0%{
         transform: rotate(0deg);
+        color: black;
+        opacity: 0.1;
     }
     80%{
         transform: rotate(1800deg);
         color: black;
+        opacity: 1;
     }
     100%{
         transform: rotate(1800deg);
@@ -46,10 +49,13 @@
 @-moz-keyframes cubicRotation{
     0%{
         transform: rotate(0deg);
+        color: black;
+        opacity: 0.1;
     }
     80%{
         transform: rotate(1800deg);
         color: black;
+        opacity: 1;
     }
     100%{
         transform: rotate(1800deg);
@@ -59,10 +65,13 @@
 @-o-keyframes cubicRotation{
     0%{
         transform: rotate(0deg);
+        color: black;
+        opacity: 0.1;
     }
     80%{
         transform: rotate(1800deg);
         color: black;
+        opacity: 1;
     }
     100%{
         transform: rotate(1800deg);
@@ -72,10 +81,13 @@
 @-ms-keyframes cubicRotation{
     0%{
         transform: rotate(0deg);
+        color: black;
+        opacity: 0.1;
     }
     80%{
         transform: rotate(1800deg);
         color: black;
+        opacity: 1;
     }
     100%{
         transform: rotate(1800deg);
@@ -85,6 +97,9 @@
 @-webkit-keyframes cubicRotation{
     0%{
         transform: rotate(0deg);
+        color: black;
+        opacity: 0.1;
+        opacity: 1;
     }
     80%{
         transform: rotate(1800deg);
