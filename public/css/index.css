@@ -19,6 +19,10 @@
     transform-origin: center;
 }
 .index svg{
+    -moz-animation: cubicRotation 40s linear infinite;
+    -o-animation: cubicRotation 40s linear infinite;
+    -ms-animation: cubicRotation 40s linear infinite;
+    -webkit-animation: cubicRotation 40s linear infinite;
     animation: cubicRotation 40s linear infinite;
     color: white;
     animation-direction: alternate;

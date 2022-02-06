@@ -1,6 +1,5 @@
 <script>
     var input = document.querySelector(".input");
-    input.focus();
     input.value = "";
     input.value = 0;
 
@@ -28,7 +27,6 @@
 
     AC.addEventListener("click", allClear);
     function allClear(){
-        input.focus();
         input.value = "";
         input.value = 0;
     }
@@ -41,7 +39,6 @@
                 input.value = input.value.slice(0,-1);
             }
         }
-        input.focus();
     }
 
 
@@ -53,7 +50,6 @@
 
 
     function checkOperator(e){
-        input.focus();
         if(['*', '/', '+', '-', '%'].includes(input.value[input.value.length - 1])){
             if(!e.target.classList.contains("minus")){
                 input.value = input.value.slice(0,-1);
@@ -67,7 +63,6 @@
     }
 
     plusMinus.addEventListener("click", function(){ 
-        input.focus();
         if(input.value != '0' && !isNaN(Number(input.value))){
             input.value = -Number(input.value);
         }
@@ -78,7 +73,6 @@
 
     dot.addEventListener("click", function(){ if(checkDot()) input.value += "."; });
     function checkDot(){
-        input.focus();
         if(['1', '2', '3', '4', '5', '6', '7', '8', '9', '0'].includes(input.value[input.value.length - 1]) || input.value == ""){
             return true;
         }
@@ -96,7 +90,6 @@
     nine.addEventListener("click", function(){ if(checkNum()) input.value += "9"; });
     zero.addEventListener("click", function(){ if(checkNum()) input.value += "0"; });
     function checkNum(){
-        input.focus();
         if(input.value == '0'){
             input.value = "";
             return true;

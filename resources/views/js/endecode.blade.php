@@ -1,7 +1,6 @@
 <script>
 
     var input = document.querySelector("textarea");
-    input.focus();
 
     var otherOptions = document.querySelectorAll(".otherOption");
     for(var i = 0; i < otherOptions.length; i++){

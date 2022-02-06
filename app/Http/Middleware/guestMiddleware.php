@@ -26,10 +26,10 @@ class guestMiddleware
         $ss ='';
         $robot ='';
         if ($agent->isRobot()) {
-            $robot = $agent->robot();
+            $robot = '-'.$agent->robot();
             $data['isRobot']=1;
         }else if ($agent->isPhone()) {
-            $ss ='mobile';
+            $ss ='-mobile';
             $data['isPhone']=1;
         }else{
             $data['isPC']=1;
