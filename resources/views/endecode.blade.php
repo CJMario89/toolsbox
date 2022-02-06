@@ -47,6 +47,7 @@
         </div>
 
         <div class="description">
+            使文字能在電腦中不同的層級傳輸。
         </div>
     </div>
 @endsection

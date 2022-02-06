@@ -40,6 +40,7 @@
         </div>
 
         <div class="description">
+            加減乘除、餘數、小數
         </div>
     </div>
 @endsection

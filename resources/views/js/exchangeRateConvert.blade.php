@@ -182,12 +182,12 @@
 
 
     //init
-    document.querySelectorAll(".block")[0].querySelector(".borderTB").classList.add("borderTBHover");
-    document.querySelectorAll(".block")[0].querySelector(".borderLR").closest(".borderLR").classList.add("borderLRHover");
-    document.querySelectorAll(".block")[1].querySelectorAll(".borderTB")[1].classList.add("borderTBHover");
-    document.querySelectorAll(".block")[1].querySelectorAll(".borderLR")[1].classList.add("borderLRHover");
-    document.querySelectorAll(".selectedOption")[0].innerHTML = document.querySelectorAll(".block")[0].querySelector(".borderTB").innerHTML;
-    document.querySelectorAll(".selectedOption")[1].innerHTML = document.querySelectorAll(".block")[1].querySelectorAll(".borderTB")[1].innerHTML;
+    document.querySelectorAll(".block")[0].querySelectorAll(".borderTB")[1].classList.add("borderTBHover");
+    document.querySelectorAll(".block")[0].querySelectorAll(".borderLR")[1].closest(".borderLR").classList.add("borderLRHover");
+    document.querySelectorAll(".block")[1].querySelectorAll(".borderTB")[0].classList.add("borderTBHover");
+    document.querySelectorAll(".block")[1].querySelectorAll(".borderLR")[0].classList.add("borderLRHover");
+    document.querySelectorAll(".selectedOption")[0].innerHTML = document.querySelectorAll(".block")[0].querySelectorAll(".borderTB")[1].innerHTML;
+    document.querySelectorAll(".selectedOption")[1].innerHTML = document.querySelectorAll(".block")[1].querySelectorAll(".borderTB")[0].innerHTML;
 
 
 
@@ -212,7 +212,7 @@
     }
     var exchangeRate;
     var date;
-    const url = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/twd.json";
+    const url = "https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/usd.json";
     (async()=>{
         const rawResponse = await fetch(url, {
             method: 'GET',
@@ -223,7 +223,7 @@
         if(rawResponse.ok){
             const response = await rawResponse.json();
             date = await response.date;
-            exchangeRate = await response.twd;
+            exchangeRate = await response.usd;
             fillRateId(exchangeRate);
             var fromUnit = Number(document.querySelectorAll(".borderTBHover")[0].id.slice(0, -2));
             var toUnit = Number(document.querySelectorAll(".borderTBHover")[1].id.slice(0, -2));

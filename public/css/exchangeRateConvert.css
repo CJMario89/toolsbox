@@ -33,6 +33,8 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 100px;
+    margin: 50px;
+    margin-top: 35px;
 }
 
 .option{
@@ -270,7 +272,7 @@
     left: 0px;
     top: 50%;
     height: 1px;
-    width: 30%;
+    width: 20%;
     background-color: black;
 }
 .otherOptionCategory::after{
@@ -280,7 +282,7 @@
     right: 0px;
     top: 50%;
     height: 1px;
-    width: 30%;
+    width: 20%;
     background-color: black;
 }
 .date{
@@ -338,5 +340,8 @@
     }
     .otherOptionContainer{
         max-height: 200px;
+    }
+    .date{
+        left: 2%;
     }
 }

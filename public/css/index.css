@@ -9,7 +9,7 @@
 }
 .indexText{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -17,6 +17,41 @@
     line-height: 150%;
     transform: scale(1.5);
     transform-origin: center;
+}
+.whyToolsbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.bi-question-octagon{
+    margin-left: 5px;
+}
+.why{
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    transition: all 0.5s;
+    white-space: nowrap;
+}
+.what{
+    display: block;
+    position: relative;
+    transition: all 0.5s;
+    white-space: nowrap;
+}
+.hideWhat{
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+.showWhy{
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 .cubic{
     display: block;

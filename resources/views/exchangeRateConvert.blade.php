@@ -9,64 +9,6 @@
         <div class="tool">
             <div class="block blockFrom">
                 <div class="optionContainer">
-                    <div class="borderLR borderLRHover">
-                        <div class="option borderTB borderTBHover twd">新台幣</div>
-                    </div>
-                    <div class="borderLR">
-                        <div class="option borderTB usd">美元</div>
-                    </div>
-                    <div class="borderLR">
-                        <div class="option borderTB jpy">日圓</div>
-                    </div>
-                    <div class="borderLR">
-                        <div class="otherContainer borderTB">
-                            <div class="otherOptionSelected">
-                                其他
-                            </div>
-                            <svg id="chevron-down" width="14" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
-                                <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z "></path>
-                            </svg>
-                            <div class="otherOptionContainer">
-                                <div class="otherOption eur">
-                                    歐元
-                                </div>
-                                <div class="otherOption gbp">
-                                    英鎊
-                                </div>
-                                 <div class="otherOption krw">
-                                    韓幣
-                                </div>
-                                <div class="otherOption cny">
-                                    人民幣
-                                </div>
-                                <div class="otherOption hkd">
-                                    港幣
-                                </div>
-                                <div class="otherOption vnd">
-                                    越南盾
-                                </div>
-                                <div class="otherOption cad">
-                                    加拿大幣
-                                </div>
-                                <div class="otherOption aud">
-                                    澳幣
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="resultContainer">
-                    <input type="text" class="result from" value="1">
-                    <div class="selectedOption">新台幣</div>
-                </div>
-            </div>
-            <div class="transfer">
-                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
-                </svg>
-            </div>
-            <div class="block blockTo">
-                <div class="optionContainer">
                     <div class="borderLR">
                         <div class="option borderTB twd">新台幣</div>
                     </div>
@@ -85,6 +27,9 @@
                                 <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z "></path>
                             </svg>
                             <div class="otherOptionContainer">
+                                <div class="otherOptionCategory">
+                                    法幣
+                                </div>
                                 <div class="otherOption eur">
                                     歐元
                                 </div>
@@ -109,6 +54,103 @@
                                 <div class="otherOption aud">
                                     澳幣
                                 </div>
+                                <div class="otherOptionCategory">
+                                    加密貨幣
+                                </div>
+                                <div class="otherOption btc">
+                                    比特幣
+                                </div>
+                                <div class="otherOption bnb">
+                                    幣安幣
+                                </div>
+                                <div class="otherOption eth">
+                                    乙太幣
+                                </div>
+                                <div class="otherOption ltc">
+                                    萊特幣
+                                </div>
+                                <div class="otherOption usdt">
+                                    泰達幣
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="resultContainer">
+                    <input type="text" class="result from" value="1">
+                    <div class="selectedOption">新台幣</div>
+                </div>
+            </div>
+            <div class="transfer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-arrow-down-up" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.5 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L11 2.707V14.5a.5.5 0 0 0 .5.5zm-7-14a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L4 13.293V1.5a.5.5 0 0 1 .5-.5z"/>
+                </svg>
+            </div>
+            <div class="block blockTo">
+                <div class="optionContainer">
+                    <div class="borderLR borderLRHover">
+                        <div class="option borderTB twd borderTBHover">新台幣</div>
+                    </div>
+                    <div class="borderLR">
+                        <div class="option borderTB usd">美元</div>
+                    </div>
+                    <div class="borderLR">
+                        <div class="option borderTB jpy">日圓</div>
+                    </div>
+                    <div class="borderLR">
+                        <div class="otherContainer borderTB">
+                            <div class="otherOptionSelected">
+                                其他
+                            </div>
+                            <svg id="chevron-down" width="14" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
+                                <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z "></path>
+                            </svg>
+                            <div class="otherOptionContainer">
+                                <div class="otherOptionCategory">
+                                    法幣
+                                </div>
+                                <div class="otherOption eur">
+                                    歐元
+                                </div>
+                                <div class="otherOption gbp">
+                                    英鎊
+                                </div>
+                                 <div class="otherOption krw">
+                                    韓幣
+                                </div>
+                                <div class="otherOption cny">
+                                    人民幣
+                                </div>
+                                <div class="otherOption hkd">
+                                    港幣
+                                </div>
+                                <div class="otherOption vnd">
+                                    越南盾
+                                </div>
+                                <div class="otherOption cad">
+                                    加拿大幣
+                                </div>
+                                <div class="otherOption aud">
+                                    澳幣
+                                </div>
+                                <div class="otherOptionCategory">
+                                    加密貨幣
+                                </div>
+                                <div class="otherOption btc">
+                                    比特幣
+                                </div>
+                                <div class="otherOption bnb">
+                                    幣安幣
+                                </div>
+                                <div class="otherOption eth">
+                                    乙太幣
+                                </div>
+                                <div class="otherOption ltc">
+                                    萊特幣
+                                </div>
+                                <div class="otherOption usdt">
+                                    泰達幣
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -126,6 +168,7 @@
         </div>
 
         <div class="description">
+            匯率非即時-每日更新(UTC+0 00:00)
         </div>
     </div>
 @endsection

@@ -59,6 +59,7 @@
         </div>
 
         <div class="description">
+            透過密碼為文字加密，同時能用相同的密碼解密。
         </div>
     </div>
 @endsection
