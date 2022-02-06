@@ -12,10 +12,20 @@
     color: #636363;
     text-align: center;
 }
+#contact{
+    position: absolute;
+    bottom: 36px;
+    right: 55px;
+    z-index: 5;
+    opacity: 1;
+    filter: invert(52%) sepia(96%) saturate(0%) hue-rotate(266deg) brightness(98%) contrast(91%);
+    cursor: pointer;
+    user-select: none;
+}
 #fb{
     position: absolute;
     bottom: 35px;
-    right: 35px;
+    right: 28px;
     z-index: 5;
     opacity: 1;
     filter: invert(52%) sepia(96%) saturate(0%) hue-rotate(266deg) brightness(98%) contrast(91%);
