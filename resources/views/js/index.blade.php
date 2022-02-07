@@ -22,35 +22,35 @@
         if(window.innerWidth < 768){
             cubicSvg.addEventListener("touchmove", function(){
                 cubicSvg.style.animationPlayState = "paused";
-            });
+            }, {passive:true});
             cubicSvg.addEventListener("touchstart", function(){
                 cubicSvg.style.animationPlayState = "paused";
-            });
+            }, {passive:true});
             cubicSvg.addEventListener("touchend", function(){
                 cubicSvg.style.animationPlayState = 'running';
-            });
+            }, {passive:true});
             cubicSvg.removeEventListener("mouseenter", function(){
                 cubicSvg.style.animationPlayState = 'paused';
-            });
+            }, {passive:true});
             cubicSvg.removeEventListener("mouseleave", function(){
                 cubicSvg.style.animationPlayState = 'running';
-            });
+            }, {passive:true});
         }else{
             cubicSvg.addEventListener("mouseenter", function(){
                 cubicSvg.style.animationPlayState = 'paused';
-            });
+            }, {passive:true});
             cubicSvg.addEventListener("mouseleave", function(){
                 cubicSvg.style.animationPlayState = 'running';
-            });
+            }, {passive:true});
             cubicSvg.removeEventListener("touchmove", function(){
                 cubicSvg.style.animationPlayState = "paused";
-            });
+            }, {passive:true});
             cubicSvg.removeEventListener("touchstart", function(){
                 cubicSvg.style.animationPlayState = "paused";
-            });
+            }, {passive:true});
             cubicSvg.removeEventListener("touchend", function(){
                 cubicSvg.style.animationPlayState = 'running';
-            });
+            }, {passive:true});
         }
     });
 
