@@ -9,68 +9,86 @@
         <div class="tool">
             <div class="block blockFrom">
                 <div class="optionContainer">
+                @if(config('app.locale') == 'zh-TW')
                     <div class="borderLR">
-                        <div class="option borderTB twd">新台幣</div>
+                        <div class="option borderTB twd">{{__('exchangeRateConvert.twd')}}</div>
                     </div>
                     <div class="borderLR borderLRHover">
-                        <div class="option borderTB usd borderTBHover">美元</div>
+                        <div class="option borderTB usd borderTBHover">{{__('exchangeRateConvert.usd')}}</div>
                     </div>
                     <div class="borderLR">
-                        <div class="option borderTB jpy">日圓</div>
+                        <div class="option borderTB jpy">{{__('exchangeRateConvert.jpy')}}</div>
                     </div>
+                @else
+                    <div class="borderLR">
+                        <div class="option borderTB usd">{{__('exchangeRateConvert.usd')}}</div>
+                    </div>
+                    <div class="borderLR borderLRHover">
+                        <div class="option borderTB gbp borderTBHover">{{__('exchangeRateConvert.gbp')}}</div>
+                    </div>
+                    <div class="borderLR">
+                        <div class="option borderTB jpy">{{__('exchangeRateConvert.jpy')}}</div>
+                    </div>
+                @endif
                     <div class="borderLR">
                         <div class="otherContainer borderTB">
                             <div class="otherOptionSelected">
-                                其他
+                                {{__('exchangeRateConvert.else')}}
                             </div>
                             <svg id="chevron-down" width="14" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
                                 <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z "></path>
                             </svg>
                             <div class="otherOptionContainer">
                                 <div class="otherOptionCategory">
-                                    法幣
+                                    {{__('exchangeRateConvert.fiatMoney')}}
                                 </div>
                                 <div class="otherOption eur">
-                                    歐元
+                                    {{__('exchangeRateConvert.eur')}}
                                 </div>
-                                <div class="otherOption gbp">
-                                    英鎊
-                                </div>
-                                 <div class="otherOption krw">
-                                    韓幣
+                                @if(config('app.locale') == 'zh-TW')
+                                    <div class="otherOption gbp">
+                                        {{__('exchangeRateConvert.gbp')}}
+                                    </div>
+                                @else
+                                    <div class="otherOption twd">
+                                        {{__('exchangeRateConvert.twd')}}
+                                    </div>
+                                @endif
+                                <div class="otherOption krw">
+                                    {{__('exchangeRateConvert.krw')}}
                                 </div>
                                 <div class="otherOption cny">
-                                    人民幣
+                                    {{__('exchangeRateConvert.cny')}}
                                 </div>
                                 <div class="otherOption hkd">
-                                    港幣
+                                    {{__('exchangeRateConvert.hkd')}}
                                 </div>
                                 <div class="otherOption vnd">
-                                    越南盾
+                                    {{__('exchangeRateConvert.vnd')}}
                                 </div>
                                 <div class="otherOption cad">
-                                    加拿大幣
+                                    {{__('exchangeRateConvert.cad')}}
                                 </div>
                                 <div class="otherOption aud">
-                                    澳幣
+                                    {{__('exchangeRateConvert.aud')}}
                                 </div>
                                 <div class="otherOptionCategory">
-                                    加密貨幣
+                                    {{__('exchangeRateConvert.cryptoCurrency')}}
                                 </div>
                                 <div class="otherOption btc">
-                                    比特幣
+                                    {{__('exchangeRateConvert.btc')}}
                                 </div>
                                 <div class="otherOption bnb">
-                                    幣安幣
+                                    {{__('exchangeRateConvert.bnb')}}
                                 </div>
                                 <div class="otherOption eth">
-                                    乙太幣
+                                    {{__('exchangeRateConvert.eth')}}
                                 </div>
                                 <div class="otherOption ltc">
-                                    萊特幣
+                                    {{__('exchangeRateConvert.ltc')}}
                                 </div>
                                 <div class="otherOption usdt">
-                                    泰達幣
+                                    {{__('exchangeRateConvert.usdt')}}
                                 </div>
                             </div>
                         </div>
@@ -78,7 +96,11 @@
                 </div>
                 <div class="resultContainer">
                     <input type="text" class="result from" value="1">
-                    <div class="selectedOption">新台幣</div>
+                    @if(config('app.locale') == 'zh-TW')
+                        <div class="selectedOption">{{__('exchangeRateConvert.usd')}}</div>
+                    @else
+                        <div class="selectedOption">{{__('exchangeRateConvert.gbp')}}</div>
+                    @endif
                 </div>
             </div>
             <div class="transfer">
@@ -88,68 +110,86 @@
             </div>
             <div class="block blockTo">
                 <div class="optionContainer">
-                    <div class="borderLR borderLRHover">
-                        <div class="option borderTB twd borderTBHover">新台幣</div>
-                    </div>
-                    <div class="borderLR">
-                        <div class="option borderTB usd">美元</div>
-                    </div>
-                    <div class="borderLR">
-                        <div class="option borderTB jpy">日圓</div>
-                    </div>
+                    @if(config('app.locale') == 'zh-TW')
+                        <div class="borderLR borderLRHover">
+                            <div class="option borderTB twd borderTBHover">{{__('exchangeRateConvert.twd')}}</div>
+                        </div>
+                        <div class="borderLR">
+                            <div class="option borderTB usd">{{__('exchangeRateConvert.usd')}}</div>
+                        </div>
+                        <div class="borderLR">
+                            <div class="option borderTB jpy">{{__('exchangeRateConvert.jpy')}}</div>
+                        </div>
+                    @else
+                        <div class="borderLR borderLRHover">
+                            <div class="option borderTB usd borderTBHover">{{__('exchangeRateConvert.usd')}}</div>
+                        </div>
+                        <div class="borderLR">
+                            <div class="option borderTB gbp">{{__('exchangeRateConvert.gbp')}}</div>
+                        </div>
+                        <div class="borderLR">
+                            <div class="option borderTB jpy">{{__('exchangeRateConvert.jpy')}}</div>
+                        </div>
+                    @endif
                     <div class="borderLR">
                         <div class="otherContainer borderTB">
                             <div class="otherOptionSelected">
-                                其他
+                                {{__('exchangeRateConvert.else')}}
                             </div>
                             <svg id="chevron-down" width="14" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
                                 <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z "></path>
                             </svg>
                             <div class="otherOptionContainer">
                                 <div class="otherOptionCategory">
-                                    法幣
+                                    {{__('exchangeRateConvert.fiatMoney')}}
                                 </div>
                                 <div class="otherOption eur">
-                                    歐元
+                                    {{__('exchangeRateConvert.eur')}}
                                 </div>
-                                <div class="otherOption gbp">
-                                    英鎊
-                                </div>
-                                 <div class="otherOption krw">
-                                    韓幣
+                                @if(config('app.locale') == 'zh-TW')
+                                    <div class="otherOption gbp">
+                                        {{__('exchangeRateConvert.gbp')}}
+                                    </div>
+                                @else
+                                    <div class="otherOption twd">
+                                        {{__('exchangeRateConvert.twd')}}
+                                    </div>
+                                @endif
+                                <div class="otherOption krw">
+                                    {{__('exchangeRateConvert.krw')}}
                                 </div>
                                 <div class="otherOption cny">
-                                    人民幣
+                                    {{__('exchangeRateConvert.cny')}}
                                 </div>
                                 <div class="otherOption hkd">
-                                    港幣
+                                    {{__('exchangeRateConvert.hkd')}}
                                 </div>
                                 <div class="otherOption vnd">
-                                    越南盾
+                                    {{__('exchangeRateConvert.vnd')}}
                                 </div>
                                 <div class="otherOption cad">
-                                    加拿大幣
+                                    {{__('exchangeRateConvert.cad')}}
                                 </div>
                                 <div class="otherOption aud">
-                                    澳幣
+                                    {{__('exchangeRateConvert.aud')}}
                                 </div>
                                 <div class="otherOptionCategory">
-                                    加密貨幣
+                                    {{__('exchangeRateConvert.cryptoCurrency')}}
                                 </div>
                                 <div class="otherOption btc">
-                                    比特幣
+                                    {{__('exchangeRateConvert.btc')}}
                                 </div>
                                 <div class="otherOption bnb">
-                                    幣安幣
+                                    {{__('exchangeRateConvert.bnb')}}
                                 </div>
                                 <div class="otherOption eth">
-                                    乙太幣
+                                    {{__('exchangeRateConvert.eth')}}
                                 </div>
                                 <div class="otherOption ltc">
-                                    萊特幣
+                                    {{__('exchangeRateConvert.ltc')}}
                                 </div>
                                 <div class="otherOption usdt">
-                                    泰達幣
+                                    {{__('exchangeRateConvert.usdt')}}
                                 </div>
                             </div>
                         </div>
@@ -157,18 +197,22 @@
                 </div>
                 <div class="resultContainer">
                     <input type="text" class="result to" value="1">
-                    <div class="selectedOption">美元</div>
+                    @if(config('app.locale') == 'zh-TW')
+                        <div class="selectedOption">{{__('exchangeRateConvert.twd')}}</div>
+                    @else
+                        <div class="selectedOption">{{__('exchangeRateConvert.usd')}}</div>
+                    @endif
                 </div>
             </div>
             <div class="date">
             </div>
         </div>
          <div class="title">
-            匯率換算
+            {{__('exchangeRateConvert.exchangeRateConvert')}}
         </div>
 
         <div class="description">
-            匯率非即時-每日更新(UTC+0 00:00)
+            {{__('exchangeRateConvert.dailyUpdate')}}
         </div>
     </div>
 @endsection

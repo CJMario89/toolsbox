@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Language;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,43 +14,46 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware(['guest'])->group(function(){
+Route::middleware(['guest', 'locale'])->group(function(){
     Route::get('/', function () {
         return view('index');
-    });
+    })->name('home');
 
-    Route::get('simpleCalculator', function () {
+    Route::get('simpleCalculator/', function () {
         return view('simpleCalculator');
     });
 
-    Route::get('positionalConvert', function () {
+    Route::get('positionalConvert/', function () {
         return view('positionalConvert');
     });
 
-    Route::get('lengthConvert', function () {
+    Route::get('lengthConvert/', function () {
         return view('lengthConvert');
     });
 
-    Route::get('weightConvert', function () {
+    Route::get('weightConvert/', function () {
         return view('weightConvert');
     });
 
-    Route::get('exchangeRateConvert', function () {
+    Route::get('exchangeRateConvert/', function () {
         return view('exchangeRateConvert');
     });
 
 
-    Route::get('hash', function () {
+    Route::get('hash/', function () {
         return view('hash');
     });
-    Route::get('endecode', function () {
+    Route::get('endecode/', function () {
         return view('endecode');
     });
-    Route::get('hmacHash', function () {
+    Route::get('hmacHash/', function () {
         return view('hmacHash');
     });
-    Route::get('endecrypt', function () {
+    Route::get('endecrypt/', function () {
         return view('endecrypt');
     });
+
+
+    Route::get('setLocale/{locale}', [Language::class, 'setLanguage']);
 });
 

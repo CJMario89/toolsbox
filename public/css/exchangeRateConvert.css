@@ -272,7 +272,7 @@
     left: 0px;
     top: 50%;
     height: 1px;
-    width: 20%;
+    width: 10%;
     background-color: black;
 }
 .otherOptionCategory::after{
@@ -282,7 +282,7 @@
     right: 0px;
     top: 50%;
     height: 1px;
-    width: 20%;
+    width: 10%;
     background-color: black;
 }
 .date{

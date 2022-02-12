@@ -229,7 +229,7 @@
             var toUnit = Number(document.querySelectorAll(".borderTBHover")[1].id.slice(0, -2));
             to.value = convertUnit(from.value, fromUnit, toUnit);
             var dateDiv = document.querySelector(".date");
-            dateDiv.innerHTML = "日期：" + date;
+            dateDiv.innerHTML = "{{__('exchangeRateConvert.date')}}" + date;
         }else{
             alert("fetch currency api fail");
         }

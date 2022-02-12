@@ -19,6 +19,9 @@ class guestMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
+        if(substr($request->url(), 0, 16) == 'http://localhost'){
+            return $next($request);
+        }
         $agent =new Agent();
         $task = $agent->platform();
         $br =$agent->browser();

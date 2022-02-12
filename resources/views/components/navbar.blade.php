@@ -7,11 +7,31 @@
             <p>Toolsbox</p>
         </div>
     </div>
+    <div class="locale">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-translate" viewBox="0 0 16 16">
+            <path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286H4.545zm1.634-.736L5.5 3.956h-.049l-.679 2.022H6.18z"/>
+            <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H2zm7.138 9.995c.193.301.402.583.63.846-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6.066 6.066 0 0 1-.415-.492 1.988 1.988 0 0 1-.94.31z"/>
+        </svg>
+        <div id="zh-TW" class="selectedLanguage">
+            {{__('Navbar.language')}}
+        </div>
+        <svg id="chevron-down" class="chevron" width="14" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
+            <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z "></path>
+        </svg>
+        <div class="otherLanguageContainer">
+            <div id="zh-TW" class="otherLanguage">
+                繁體中文
+            </div>
+            <div id="en" class="otherLanguage">
+                English
+            </div>
+        </div>
+    </div>
     <div class="menuButton">
-        選單
+        {{__('Navbar.menu')}}
     </div>
     <div class="menu">
-        <div class="menuOptionContainer">
+        <div class="menuOptionContainer closeContainer">
             <div class="menuClose menuOption">
                 <div class="optionText">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
@@ -27,7 +47,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-spreadsheet" viewBox="0 0 16 16">
                         <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2zm2-1a1 1 0 0 0-1 1v4h10V2a1 1 0 0 0-1-1H4zm9 6h-3v2h3V7zm0 3h-3v2h3v-2zm0 3h-3v2h2a1 1 0 0 0 1-1v-1zm-4 2v-2H6v2h3zm-4 0v-2H3v1a1 1 0 0 0 1 1h1zm-2-3h2v-2H3v2zm0-3h2V7H3v2zm3-2v2h3V7H6zm3 3H6v2h3v-2z"/>
                     </svg>
-                    計算機
+                    {{__('Navbar.calculator')}}
                 </div>
                 <div class="optionExpand">
                     <svg id="chevron-down" width="10" height="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
@@ -38,7 +58,7 @@
             <div class="menuSubOptionContainer">
                 <div class="menuSubOption simpleCalculator">
                     <div class="subOptionText">
-                        簡易計算機
+                        {{__('Navbar.simpleCalculator')}}
                     </div>
                 </div>
             </div>
@@ -49,7 +69,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
                     </svg>
-                    換算工具
+                    {{__('Navbar.convertTool')}}
                 </div>
                 <div class="optionExpand">
                     <svg id="chevron-down" width="10" height="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
@@ -60,22 +80,22 @@
             <div class="menuSubOptionContainer">
                 <div class="menuSubOption lengthConvert">
                     <div class="subOptionText">
-                        長度換算
+                        {{__('Navbar.lengthConvert')}}
                     </div>
                 </div>
                 <div class="menuSubOption weightConvert">
                     <div class="subOptionText">
-                        重量換算
+                        {{__('Navbar.weightConvert')}}
                     </div>
                 </div>
                 <div class="menuSubOption exchangeRateConvert">
                     <div class="subOptionText">
-                        匯率換算
+                        {{__('Navbar.exchangeRateConvert')}}
                     </div>
                 </div>
                 <div class="menuSubOption  positionalConvert">
                     <div class="subOptionText">
-                        進位轉換
+                        {{__('Navbar.positionalConvert')}}
                     </div>
                 </div>
             </div>
@@ -87,7 +107,7 @@
                         <path d="M2.146 3.146a.5.5 0 0 1 .708 0l.823.824a.75.75 0 0 1 0 1.06l-.823.824a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708ZM4 6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 0 1h-1A.5.5 0 0 1 4 6Zm6.354-2.854a.5.5 0 0 0-.708.708l.647.646-.647.646a.5.5 0 1 0 .708.708l.823-.824a.75.75 0 0 0 0-1.06l-.823-.824ZM12 5.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1Z"/>
                         <path d="M0 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3Zm2-1a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h5.5V2H2Zm6.5 0v12H14a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1H8.5Z"/>
                     </svg>
-                    轉碼工具
+                    {{__('Navbar.transcodeTool')}}
                 </div>
                 <div class="optionExpand">
                     <svg id="chevron-down" width="10" height="10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
@@ -98,22 +118,22 @@
             <div class="menuSubOptionContainer">
                 <div class="menuSubOption hash">
                     <div class="subOptionText">
-                        雜湊(hash)
+                        {{__('Navbar.hash')}}
                     </div>
                 </div>
                 <div class="menuSubOption hmacHash">
                     <div class="subOptionText">
-                        Hmac雜湊(Hmac-hash)
+                        {{__('Navbar.Hmac-hash')}}
                     </div>
                 </div>
                 <div class="menuSubOption endecrypt">
                     <div class="subOptionText">
-                        加密解密(en/decrypt)
+                        {{__('Navbar.endecrypt')}}
                     </div>
                 </div>
                 <div class="menuSubOption endecode">
                     <div class="subOptionText">
-                        編碼解碼(en/decode)
+                        {{__('Navbar.endecode')}}
                     </div>
                 </div>
             </div>

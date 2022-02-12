@@ -1,7 +1,7 @@
 .navbar{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     height: 60px;
     width: 100%;
@@ -23,6 +23,7 @@
     margin-left: 15px;
     cursor: pointer;
     user-select: none;
+    margin-right: auto;
 }
 .logoText{
     margin-left: 5px;
@@ -37,6 +38,49 @@
 .logo p{
     font-size: 32px;
     font-weight: 800;
+}
+
+.locale{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.otherLanguageContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -122px;
+    left: 33px;
+    background: linear-gradient(to bottom, transparent 0%, transparent 5px, #ffffff 5px, #ffffff 100%);
+    box-shadow: 0px 5px 15px #9a9a9a; 
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease-in-out;
+    white-space: nowrap;
+    padding: 9px;
+}
+.showOtherLanguageContainer{
+    opacity: 1;
+    visibility: visible;
+}
+.selectedLanguage{
+    margin: 5px;
+}
+.otherLanguage{
+    padding: 15px;
+    padding-right: 16px;
+    padding-left: 16px;
+    white-space: nowrap;
+}
+.otherLanguage:hover{
+    text-shadow: 0px 0px 10px black;
 }
 
 .menu{
@@ -87,6 +131,16 @@
     overflow: hidden;
 }
 
+.chevron{
+    transition: all 0.5s ease-in-out;
+}
+
+.chevronRotate{
+    transform: rotateX(180deg);
+    transform-origin: center;
+}
+
+
 @media screen and (max-width: 3000px){
     .menuButton{
         display: none;
@@ -102,16 +156,13 @@
         margin-right: 20px;
     }
     .menuOptionContainer{
-        width: 160px;
+        width: fit-content;
         cursor: pointer;
         padding: 0px;
     }
     .menuOption{
         padding: 10px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        margin-left: 20px;
         transition: all 0.5s;
     }
     .menuOption svg{
@@ -133,10 +184,10 @@
         position: fixed;
         top: 60px;
         right: 0px;
-        width: 50%;
+        width: 30%;
         height: 0px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: start;
         align-content: flex-start;
         flex-wrap: wrap;
@@ -156,6 +207,9 @@
         opacity: 1;
         visibility: visible;
     }
+    .closeContainer{
+        width: 0px;
+    }
 }
 @media screen and (max-width: 768px){
     .menuButton{
@@ -163,10 +217,11 @@
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        margin-right: 30px;
+        margin-right: 20px;
         border-radius: 10px;
         cursor: pointer;
         font-size: 16px;
+        white-space: nowrap;
     }
     .menuButton:hover{
         background-color: #EFEFEF;
@@ -244,9 +299,5 @@
     }
     .optionExpand{
         transition: all 0.5s;
-    }
-    .chevronRotate{
-        transform: rotateX(180deg);
-        transform-origin: center;
     }
 }

@@ -116,6 +116,44 @@
         clearTimeout(closeSubOptionTimeout);
     }
 
+    //locale
+    var language = document.documentElement.lang;
+
+    var locale = document.querySelector(".locale");
+    var languageTimeout;
+    locale.addEventListener("mouseenter", function(){
+        clearTimeout(languageTimeout);
+        document.querySelector(".otherLanguageContainer").classList.add("showOtherLanguageContainer");
+        document.querySelector(".chevron").classList.add("chevronRotate");
+    });
+    locale.addEventListener("click", function(){
+        document.querySelector(".otherLanguageContainer").classList.add("showOtherLanguageContainer");
+        document.querySelector(".chevron").classList.add("chevronRotate");
+        window.addEventListener("click", function(e){
+            if(!e.target.closest(".locale")){
+                document.querySelector(".otherLanguageContainer").classList.remove("showOtherLanguageContainer");
+                document.querySelector(".chevron").classList.remove("chevronRotate");
+            }
+        });
+    });
+    locale.addEventListener("mouseleave", function(){
+        languageTimeout = setTimeout(
+            function(){
+                document.querySelector(".otherLanguageContainer").classList.remove("showOtherLanguageContainer");
+                document.querySelector(".chevron").classList.remove("chevronRotate");
+            }, 300);
+    });
+
+    if(window.innerWidth < 768){
+        document.querySelector(".selectedLanguage").innerHTML = "";
+    }
+
+    var otherLanguages = document.querySelectorAll(".otherLanguage");
+    for(var i = 0; i < otherLanguages.length; i++){
+        otherLanguages[i].addEventListener("click", function(e){
+            window.location = "{{url('setLocale')}}/" + e.target.id;
+        });
+    }
 
 
 

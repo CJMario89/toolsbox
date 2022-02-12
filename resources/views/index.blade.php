@@ -17,12 +17,13 @@
             
             <br>
             <div class="why">
-                提供許多方便實用的工具
+                {{__('index.offerConvienceAndPracticalTool')}}
                 <br>
-                網站是箱子
+                {{__('index.webIsBox')}}
+                
             </div>
             <div class="what">
-                線上實用的工具箱
+                {{__('index.usefulOnlineTool')}}
             </div>
         </div>
         <div class="cubic">

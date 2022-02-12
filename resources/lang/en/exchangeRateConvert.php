@@ -1,0 +1,26 @@
+<?php
+ 
+return [
+    'usd' => 'USD',
+    'gbp' => 'GBP',
+    'jpy' => 'JPY',
+    'twd' => 'TWD',
+    'else' => 'else',
+    'fiatMoney' => 'Fiat Money',
+    'eur' => 'EUR',
+    'krw' => 'KRW',
+    'cny' => 'CNY',
+    'hkd' => 'HKD',
+    'vnd' => 'VND',
+    'cad' => 'CAD',
+    'aud' => 'AUD',
+    'cryptoCurrency' => 'CryptoCurrency',
+    'btc' => 'BTC',
+    'bnb' => 'BNB',
+    'eth' => 'ETH',
+    'ltc' => 'LTC',
+    'usdt' => 'USDT',
+    'date' => 'date: ',
+    'exchangeRateConvert' => 'Exchange Rate',
+    'dailyUpdate' => 'The exchange rate is not real-time - daily updated(UTC+0 00:00)',
+];
