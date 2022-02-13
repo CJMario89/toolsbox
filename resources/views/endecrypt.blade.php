@@ -10,8 +10,8 @@
     <div class="container">
         <div class="tool">
             <div class="inputBlockContainer">
-                <textarea class="inputBlock from" type="text" placeholder="輸入"></textarea>
-                <textarea class="key" type="text" placeholder="密碼"></textarea>
+                <textarea class="inputBlock from" type="text" placeholder="{{__('endecrypt.input')}}"></textarea>
+                <textarea class="key" type="text" placeholder="{{__('endecrypt.password')}}"></textarea>
             </div>
             <div class="borderLR borderLRHover method">
                 <div id="AES" class="otherContainer borderTB borderTBHover">
@@ -47,19 +47,19 @@
                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
             </svg>
             <div class="borderLR encrypt borderLRHover">
-                <div id="encrypt" class="option borderTB borderTBHover">加密</div>
+                <div id="encrypt" class="option borderTB borderTBHover">{{__('endecrypt.encrypt')}}</div>
             </div>
             <div class="borderLR decrypt">
-                <div id="decrypt" class="option borderTB">解密</div>
+                <div id="decrypt" class="option borderTB">{{__('endecrypt.decrypt')}}</div>
             </div>
-            <textarea class="inputBlock to" type="text" placeholder="結果" readonly></textarea>
+            <textarea class="inputBlock to" type="text" placeholder="{{__('endecrypt.result')}}" readonly></textarea>
         </div>
          <div class="title">
-            加密/解密(encrypt/decrypt)
+            {{__('endecrypt.endecrypt')}}
         </div>
 
         <div class="description">
-            透過密碼為文字加密，同時能用相同的密碼解密。
+            {{__('endecrypt.description')}}
         </div>
     </div>
 @endsection

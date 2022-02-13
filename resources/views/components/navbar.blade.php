@@ -83,9 +83,14 @@
                         {{__('Navbar.lengthConvert')}}
                     </div>
                 </div>
-                <div class="menuSubOption weightConvert">
+                <div class="menuSubOption massConvert">
                     <div class="subOptionText">
-                        {{__('Navbar.weightConvert')}}
+                        {{__('Navbar.massConvert')}}
+                    </div>
+                </div>
+                <div class="menuSubOption capacityConvert">
+                    <div class="subOptionText">
+                        {{__('Navbar.capacityConvert')}}
                     </div>
                 </div>
                 <div class="menuSubOption exchangeRateConvert">

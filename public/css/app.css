@@ -35,6 +35,12 @@ p{
     min-height: 95%;
 }
 
+/* global adjust*/
+.description{
+    font-size: 16px !important;
+    line-height: 32px !important;
+}
+
 @media screen and (max-width: 768px) {
     body{
         font-size: 16px;

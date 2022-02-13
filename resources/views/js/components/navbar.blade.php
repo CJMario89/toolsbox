@@ -19,14 +19,17 @@
     for(var i = 0; i < menuOptions.length; i++){
         if(i != 0){
             menuOptions[i].addEventListener("click", openSubOption);
-            menuOptions[i].addEventListener("mouseenter", openSubOption);
-            menuOptions[i].addEventListener("mouseleave", closeSubOption);
+            if(window.innerWidth > 768){
+                menuOptions[i].addEventListener("mouseenter", openSubOption);
+                menuOptions[i].addEventListener("mouseleave", closeSubOption);
+            }
         }
     }
     for(var i = 0; i < menuSubOptionContainers.length; i++){
-        menuSubOptionContainers[i].addEventListener("mouseenter", keepSubOptionOpen);
-        menuSubOptionContainers[i].addEventListener("mouseleave", closeSubOption);
-        
+        if(window.innerWidth > 768){
+            menuSubOptionContainers[i].addEventListener("mouseenter", keepSubOptionOpen);
+            menuSubOptionContainers[i].addEventListener("mouseleave", closeSubOption);
+        }
     }
     function openSubOption(e){
         closeOtherOption();
@@ -183,9 +186,15 @@
         e.stopPropagation();
     });
 
-    var weightConvert = document.querySelector(".weightConvert");
-    weightConvert.addEventListener("click", function(e){
-        window.location = "{{url('weightConvert')}}";
+    var massConvert = document.querySelector(".massConvert");
+    massConvert.addEventListener("click", function(e){
+        window.location = "{{url('massConvert')}}";
+        e.stopPropagation();
+    });
+
+    var capacityConvert = document.querySelector(".capacityConvert");
+    capacityConvert.addEventListener("click", function(e){
+        window.location = "{{url('capacityConvert')}}";
         e.stopPropagation();
     });
 

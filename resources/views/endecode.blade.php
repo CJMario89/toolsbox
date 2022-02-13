@@ -9,7 +9,7 @@
 @section('content')
     <div class="container">
         <div class="tool">
-            <textarea class="inputBlock from" type="text" placeholder="輸入"></textarea>
+            <textarea class="inputBlock from" type="text" placeholder="{{__('endecode.input')}}"></textarea>
             <div class="borderLR borderLRHover method">
                 <div id="base64" class="otherContainer borderTB borderTBHover">
                     <div class="otherOptionSelected">
@@ -35,19 +35,23 @@
                 <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
             </svg>
             <div class="borderLR encode borderLRHover">
-                <div id="encode" class="option borderTB borderTBHover">編碼</div>
+                <div id="encode" class="option borderTB borderTBHover">
+                    {{__('endecode.encode')}}
+                </div>
             </div>
             <div class="borderLR decode">
-                <div id="decode" class="option borderTB">解碼</div>
+                <div id="decode" class="option borderTB">
+                    {{__('endecode.decode')}}
+                </div>
             </div>
-            <textarea class="inputBlock to" type="text" placeholder="結果" readonly></textarea>
+            <textarea class="inputBlock to" type="text" placeholder="{{__('endecode.result')}}" readonly></textarea>
         </div>
          <div class="title">
-            編碼/解碼(encode/decode)
+            {{__('endecode.endecode')}}
         </div>
 
         <div class="description">
-            使文字能在電腦中不同的層級傳輸。
+            {{__('endecode.description')}}
         </div>
     </div>
 @endsection

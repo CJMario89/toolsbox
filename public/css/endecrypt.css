@@ -179,7 +179,7 @@
     content: '';
     display: block;
     position: absolute;
-    height: 1px;
+    height: 0.5px;
     width: 0%;
     bottom: 0px;
     left: 0px;
@@ -190,7 +190,7 @@
     content: '';
     display: block;
     position: absolute;
-    height: 1px;
+    height: 0.5px;
     width: 100%;
     bottom: 0px;
     left: 0px;
@@ -201,7 +201,7 @@
     content: '';
     display: block;
     position: absolute;
-    height: 1px;
+    height: 0.5px;
     width: 0%;
     top: 0px;
     right: 0px;
@@ -212,7 +212,7 @@
     content: '';
     display: block;
     position: absolute;
-    height: 1px;
+    height: 0.5px;
     width: 100%;
     top: 0px;
     right: 0px;
@@ -227,7 +227,7 @@
     content: '';
     display: block;
     position: absolute;
-    width: 1px;
+    width: 0.5px;
     height: 0%;
     top: 0px;
     left: 0px;
@@ -239,7 +239,7 @@
     display: block;
     position: absolute;
     height: 100%;
-    width: 1px;
+    width: 0.5px;
     top: 0px;
     left: 0px;
     background-color: black;
@@ -250,7 +250,7 @@
     display: block;
     position: absolute;
     height: 0%;
-    width: 1px;
+    width: 0.5px;
     bottom: 0px;
     right: 0px;
     background-color: black;
@@ -261,7 +261,7 @@
     display: block;
     position: absolute;
     height: 100%;
-    width: 1px;
+    width: 0.5px;
     bottom: 0px;
     right: 0px;
     background-color: black;
@@ -292,7 +292,7 @@
     position: absolute;
     left: 0px;
     top: 50%;
-    height: 1px;
+    height: 0.5px;
     width: 10%;
     background-color: black;
 }
@@ -302,7 +302,7 @@
     position: absolute;
     right: 0px;
     top: 50%;
-    height: 1px;
+    height: 0.5px;
     width: 10%;
     background-color: black;
 }

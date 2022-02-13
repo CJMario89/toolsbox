@@ -1,0 +1,25 @@
+<?php
+ 
+return [
+    'kilogram' => '公斤(kg)',
+    'pound' => '磅(lb)',
+    'gram' => '公克(g)',
+    'else' => '其他',
+    'avoirdupoisUS' => '美制',
+    'longTon' => '英噸',
+    'ounce' => '盎司(oz)',
+    'dram' => '打蘭(dr)',
+    'grain' => '格令(gr)',
+    'metric' => '公制',
+    'ton' => '公噸(t)',
+    'milligram' => '毫克(mg)',
+    'microgram' => '微克(µg)',
+    'china-catty' => '斤',
+    'tw-tael' => '兩',
+    'tw-mace' => '錢',
+    'tw-cadareen' => '分',
+    'carat' => '克拉',
+    'kilonewton' => '千牛頓(kN)',
+    'massConvert' => '重量換算',
+    'description' => '公制、英制、東亞古制',
+];

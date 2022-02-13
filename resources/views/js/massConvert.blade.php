@@ -186,10 +186,10 @@
     //init
     document.getElementById("1fr").classList.add("borderTBHover");
     document.getElementById("1fr").closest(".borderLR").classList.add("borderLRHover");
-    document.getElementById("3.28to").classList.add("borderTBHover");
-    document.getElementById("3.28to").closest(".borderLR").classList.add("borderLRHover");
+    document.getElementById("2.2to").classList.add("borderTBHover");
+    document.getElementById("2.2to").closest(".borderLR").classList.add("borderLRHover");
     document.querySelectorAll(".selectedOption")[0].innerHTML = document.getElementById("1fr").innerHTML;
-    document.querySelectorAll(".selectedOption")[1].innerHTML = document.getElementById("3.28to").innerHTML;
+    document.querySelectorAll(".selectedOption")[1].innerHTML = document.getElementById("2.2to").innerHTML;
 
     to.value = convertUnit(from.value, fromUnit, toUnit);
 

@@ -25,6 +25,7 @@
     border-radius: 5px;
     box-shadow: 0px 0px 10px #9a9a9a;
     white-space: nowrap;
+    position: relative;
 }
 .description{
     display: flex;
@@ -93,7 +94,7 @@
 .otherContainer svg{
     position: absolute;
     right: 6px;
-    bottom: 4px;
+    bottom: 5px;
 }
 .other{
     position: absolute;
@@ -157,7 +158,7 @@
     content: '';
     display: block;
     position: absolute;
-    height: 1px;
+    height: 0.5px;
     width: 0%;
     bottom: 0px;
     left: 0px;
@@ -168,7 +169,7 @@
     content: '';
     display: block;
     position: absolute;
-    height: 1px;
+    height: 0.5px;
     width: 100%;
     bottom: 0px;
     left: 0px;
@@ -179,7 +180,7 @@
     content: '';
     display: block;
     position: absolute;
-    height: 1px;
+    height: 0.5px;
     width: 0%;
     top: 0px;
     right: 0px;
@@ -190,7 +191,7 @@
     content: '';
     display: block;
     position: absolute;
-    height: 1px;
+    height: 0.5px;
     width: 100%;
     top: 0px;
     right: 0px;
@@ -205,7 +206,7 @@
     content: '';
     display: block;
     position: absolute;
-    width: 1px;
+    width: 0.5px;
     height: 0%;
     top: 0px;
     left: 0px;
@@ -217,7 +218,7 @@
     display: block;
     position: absolute;
     height: 100%;
-    width: 1px;
+    width: 0.5px;
     top: 0px;
     left: 0px;
     background-color: black;
@@ -228,7 +229,7 @@
     display: block;
     position: absolute;
     height: 0%;
-    width: 1px;
+    width: 0.5px;
     bottom: 0px;
     right: 0px;
     background-color: black;
@@ -239,7 +240,7 @@
     display: block;
     position: absolute;
     height: 100%;
-    width: 1px;
+    width: 0.5px;
     bottom: 0px;
     right: 0px;
     background-color: black;
@@ -270,8 +271,8 @@
     position: absolute;
     left: 0px;
     top: 50%;
-    height: 1px;
-    width: 30%;
+    height: 0.5px;
+    width: 10%;
     background-color: black;
 }
 .otherOptionCategory::after{
@@ -280,11 +281,18 @@
     position: absolute;
     right: 0px;
     top: 50%;
-    height: 1px;
-    width: 30%;
+    height: 0.5px;
+    width: 10%;
     background-color: black;
 }
-
+.date{
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+}
 
 @media screen and (max-width: 3000px){
     .block{
@@ -312,7 +320,7 @@
         margin-left: 17px;
     }
     .tool{
-        width: 310px;
+        width: 325px;
         height: 450px;
         font-size: 16px;
     }
@@ -332,5 +340,8 @@
     }
     .otherOptionContainer{
         max-height: 200px;
+    }
+    .date{
+        left: 2%;
     }
 }

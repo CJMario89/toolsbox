@@ -10,97 +10,97 @@
             <div class="block">
                 <div class="optionContainer">
                     <div class="borderLR borderLRHover">
-                        <div id="1fr" class="option borderTB borderTBHover">公尺(m)</div>
+                        <div id="1fr" class="option borderTB borderTBHover">
+                            {{__('lengthConvert.meter')}}
+                        </div>
                     </div>
                     <div class="borderLR">
-                        <div id="3.28fr" class="option borderTB">英呎(ft)</div>
+                        <div id="3.28fr" class="option borderTB">
+                            {{__('lengthConvert.foot')}}
+                        </div>
                     </div>
                     <div class="borderLR">
-                        <div id="3.03fr" class="option borderTB">丈(十尺)</div>
+                        <div id="39.37fr" class="option borderTB">
+                            {{__('lengthConvert.inch')}}
+                        </div>
                     </div>
                     <div class="borderLR">
                         <div class="otherContainer borderTB">
                             <div class="otherOptionSelected">
-                                其他
+                                {{__('lengthConvert.else')}}
                             </div>
                             <svg id="chevron-down" width="14" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
                                 <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z "></path>
                             </svg>
                             <div class="otherOptionContainer">
                                 <div class="otherOptionCategory">
-                                    英制
+                                    {{__('lengthConvert.britishAmerican')}}
                                 </div>
                                 <div id="0.000621fr" class="otherOption">
-                                    英里(mi)
+                                    {{__('lengthConvert.mile')}}
                                 </div>
                                  <div id="0.19884fr" class="otherOption">
-                                    桿 (rd)
+                                    {{__('lengthConvert.rod')}}
                                 </div>
                                 <div id="0.55fr" class="otherOption">
-                                    噚
+                                    {{__('lengthConvert.fathom')}}
                                 </div>
                                 <div id="1.09fr" class="otherOption">
-                                    碼(yd)
+                                    {{__('lengthConvert.yard')}}
                                 </div>
                                 <div id="3.28fr" class="otherOption">
-                                    英呎(ft)
+                                    {{__('lengthConvert.foot')}}
                                 </div>
                                 <div id="39.37fr" class="otherOption">
-                                    英吋(in)
+                                    {{__('lengthConvert.inch')}}
                                 </div>
                                 <div class="otherOptionCategory">
-                                    公制
+                                    {{__('lengthConvert.metric')}}
                                 </div>
                                 <div id="0.001fr" class="otherOption">
-                                    公里(km)
+                                    {{__('lengthConvert.kilometer')}}
                                 </div>
                                 <div id="1fr" class="otherOption">
-                                    公尺(m)
+                                    {{__('lengthConvert.meter')}}
                                 </div>
                                 <div id="100fr" class="otherOption">
-                                    公分(cm)
+                                    {{__('lengthConvert.centimeter')}}
                                 </div>
                                 <div id="1000fr" class="otherOption">
-                                    毫米(mm)
+                                    {{__('lengthConvert.millimeter')}}
                                 </div>
                                 <div id="1000000fr" class="otherOption">
-                                    微米(µm)
+                                    {{__('lengthConvert.micrometer')}}
                                 </div>
                                 <div id="1000000000fr" class="otherOption">
-                                    奈米(nm)
+                                    {{__('lengthConvert.nanometer')}}
                                 </div>
                                 <div class="otherOptionCategory">
-                                    古東亞
+                                    {{__('lengthConvert.else')}}
                                 </div>
                                 <div id="0.005fr" class="otherOption">
-                                    堂
+                                    {{__('lengthConvert.tang')}}
                                 </div>
                                 <div id="3.03fr" class="otherOption">
-                                    丈
+                                    {{__('lengthConvert.zhang')}}
                                 </div>
                                 <div id="0.303fr" class="otherOption">
-                                    咫
+                                    {{__('lengthConvert.chi')}}
                                 </div>
                                 <div id="0.0303fr" class="otherOption">
-                                    寸
+                                    {{__('lengthConvert.tsun')}}
                                 </div>
                                 <div id="0.0303fr" class="otherOption">
-                                    分
-                                </div>
-                                <div class="otherOptionCategory">
-                                    其他
+                                    {{__('lengthConvert.fen')}}
                                 </div>
                                 <div id="0.00054fr" class="otherOption">
-                                    海里
+                                    {{__('lengthConvert.nauticalMile')}}
                                 </div>
                                 <div id="10000000000fr" class="otherOption">
-                                    埃米(Å)
+                                    {{__('lengthConvert.angstrom')}}
                                 </div>
                                 <div id="352.77fr" class="otherOption">
-                                    點(pt)
-                                </div>
-                                <div id="4512fr" class="otherOption">
-                                    派卡(pc)
+                                    {{__('lengthConvert.point')}}
                                 </div>
                             </div>
                         </div>
@@ -108,7 +108,9 @@
                 </div>
                 <div class="resultContainer">
                     <input type="text" class="result from" value="1">
-                    <div class="selectedOption">公尺(m)</div>
+                    <div class="selectedOption">
+                        {{__('lengthConvert.meter')}}
+                    </div>
                 </div>
             </div>
             <div class="transfer">
@@ -119,97 +121,97 @@
             <div class="block">
                 <div class="optionContainer">
                     <div class="borderLR">
-                        <div id="1to" class="option borderTB">公尺(m)</div>
+                        <div id="1to" class="option borderTB">
+                            {{__('lengthConvert.meter')}}
+                        </div>
                     </div>
                     <div class="borderLR borderLRHover">
-                        <div id="3.28to" class="option borderTB borderTBHover">英呎(ft)</div>
+                        <div id="3.28to" class="option borderTB borderTBHover">
+                            {{__('lengthConvert.foot')}}
+                        </div>
                     </div>
                     <div class="borderLR">
-                        <div id="3.03to" class="option borderTB">丈(十尺)</div>
+                        <div id="39.37to" class="option borderTB">
+                            {{__('lengthConvert.inch')}}
+                        </div>
                     </div>
                     <div class="borderLR">
                         <div class="otherContainer borderTB">
                             <div class="otherOptionSelected">
-                                其他
+                                {{__('lengthConvert.else')}}
                             </div>
                             <svg id="chevron-down" width="14" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
                                 <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z "></path>
                             </svg>
                             <div class="otherOptionContainer">
                                 <div class="otherOptionCategory">
-                                    英制
+                                    {{__('lengthConvert.britishAmerican')}}
                                 </div>
                                 <div id="0.000621to" class="otherOption">
-                                    英里(mi)
+                                    {{__('lengthConvert.mile')}}
                                 </div>
                                  <div id="0.19884to" class="otherOption">
-                                    桿 (rd)
+                                    {{__('lengthConvert.rod')}}
                                 </div>
                                 <div id="0.55to" class="otherOption">
-                                    噚
+                                    {{__('lengthConvert.fathom')}}
                                 </div>
                                 <div id="1.09to" class="otherOption">
-                                    碼(yd)
+                                    {{__('lengthConvert.yard')}}
                                 </div>
                                 <div id="3.28to" class="otherOption">
-                                    英呎(ft)
+                                    {{__('lengthConvert.foot')}}
                                 </div>
                                 <div id="39.37to" class="otherOption">
-                                    英吋(in)
+                                    {{__('lengthConvert.inch')}}
                                 </div>
                                 <div class="otherOptionCategory">
-                                    公制
+                                    {{__('lengthConvert.metric')}}
                                 </div>
                                 <div id="0.001to" class="otherOption">
-                                    公里(km)
+                                    {{__('lengthConvert.kilometer')}}
                                 </div>
                                 <div id="1to" class="otherOption">
-                                    公尺(m)
+                                    {{__('lengthConvert.meter')}}
                                 </div>
                                 <div id="100to" class="otherOption">
-                                    公分(cm)
+                                    {{__('lengthConvert.centimeter')}}
                                 </div>
                                 <div id="1000to" class="otherOption">
-                                    毫米(mm)
+                                    {{__('lengthConvert.millimeter')}}
                                 </div>
                                 <div id="1000000to" class="otherOption">
-                                    微米(µm)
+                                    {{__('lengthConvert.micrometer')}}
                                 </div>
                                 <div id="1000000000to" class="otherOption">
-                                    奈米(nm)
+                                    {{__('lengthConvert.nanometer')}}
                                 </div>
                                 <div class="otherOptionCategory">
-                                    古東亞
+                                    {{__('lengthConvert.else')}}
                                 </div>
                                 <div id="0.005to" class="otherOption">
-                                    堂
+                                    {{__('lengthConvert.tang')}}
                                 </div>
                                 <div id="3.03to" class="otherOption">
-                                    丈
+                                    {{__('lengthConvert.zhang')}}
                                 </div>
                                 <div id="0.303to" class="otherOption">
-                                    咫
+                                    {{__('lengthConvert.chi')}}
                                 </div>
                                 <div id="0.0303to" class="otherOption">
-                                    寸
+                                    {{__('lengthConvert.tsun')}}
                                 </div>
                                 <div id="0.0303to" class="otherOption">
-                                    分
-                                </div>
-                                <div class="otherOptionCategory">
-                                    其他
+                                    {{__('lengthConvert.fen')}}
                                 </div>
                                 <div id="0.00054to" class="otherOption">
-                                    海里
+                                    {{__('lengthConvert.nauticalMile')}}
                                 </div>
                                 <div id="10000000000to" class="otherOption">
-                                    埃米(Å)
+                                    {{__('lengthConvert.angstrom')}}
                                 </div>
                                 <div id="352.77to" class="otherOption">
-                                    點(pt)
-                                </div>
-                                <div id="4512to" class="otherOption">
-                                    派卡(pc)
+                                    {{__('lengthConvert.point')}}
                                 </div>
                             </div>
                         </div>
@@ -217,16 +219,18 @@
                 </div>
                 <div class="resultContainer">
                     <input type="text" class="result to" value="1">
-                    <div class="selectedOption">英呎(ft)</div>
+                    <div class="selectedOption">
+                        {{__('lengthConvert.foot')}}
+                    </div>
                 </div>
             </div>
         </div>
          <div class="title">
-            長度換算
+            {{__('lengthConvert.lengthConvert')}}
         </div>
 
         <div class="description">
-            公制、英制、東亞古制
+            {{__('lengthConvert.description')}}
         </div>
     </div>
 @endsection

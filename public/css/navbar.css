@@ -240,12 +240,15 @@
     }
     .menuOption{
         height: 40px;
-        width: 100%;
+        width: 90%;
         position: relative;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 10px;
     }
     .menuOption:hover{
         text-shadow: none;

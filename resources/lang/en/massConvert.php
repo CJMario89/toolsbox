@@ -1,0 +1,25 @@
+<?php
+ 
+return [
+    'kilogram' => 'Kilogram',
+    'pound' => 'Pound',
+    'gram' => 'Gram',
+    'else' => 'Else',
+    'avoirdupoisUS' => 'Avoirdupois(U.S.)',
+    'longTon' => 'Long Ton',
+    'ounce' => 'Ounce',
+    'dram' => 'Dram',
+    'grain' => 'Grain',
+    'metric' => 'Metric',
+    'ton' => 'Ton',
+    'milligram' => 'Milligram',
+    'microgram' => 'Microgram',
+    'china-catty' => 'China-catty',
+    'tw-tael' => 'TW-tael',
+    'tw-mace' => 'TW-mace',
+    'tw-cadareen' => 'TW-cadareen',
+    'carat' => 'Carat',
+    'kilonewton' => 'Kilinewton',
+    'massConvert' => 'Mass Convert',
+    'description' => 'Metric, Avoirdupois(U.S.)',
+];

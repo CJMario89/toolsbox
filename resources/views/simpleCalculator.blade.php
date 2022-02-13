@@ -36,11 +36,11 @@
             </div>
         </div>
          <div class="title">
-            簡易計算機
+            {{__('simpleCalculator.simpleCalculator')}}
         </div>
 
         <div class="description">
-            加減乘除、餘數、小數
+            {{__('simpleCalculator.description')}}
         </div>
     </div>
 @endsection

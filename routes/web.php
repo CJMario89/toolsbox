@@ -31,8 +31,12 @@ Route::middleware(['guest', 'locale'])->group(function(){
         return view('lengthConvert');
     });
 
-    Route::get('weightConvert/', function () {
-        return view('weightConvert');
+    Route::get('massConvert/', function () {
+        return view('massConvert');
+    });
+
+    Route::get('capacityConvert/', function () {
+        return view('capacityConvert');
     });
 
     Route::get('exchangeRateConvert/', function () {

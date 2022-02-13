@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('head')
-    <link rel="stylesheet" href="{{asset('css/weightConvert.css')}}">
+    <link rel="stylesheet" href="{{asset('css/massConvert.css')}}">
 @endsection
 
 @section('content')
@@ -10,88 +10,88 @@
             <div class="block">
                 <div class="optionContainer">
                     <div class="borderLR borderLRHover">
-                        <div id="1fr" class="option borderTB borderTBHover">公斤(kg)</div>
+                        <div id="1fr" class="option borderTB borderTBHover">
+                            {{__('massConvert.kilogram')}}
+                        </div>
                     </div>
                     <div class="borderLR">
-                        <div id="2.2fr" class="option borderTB">磅(lb)</div>
+                        <div id="2.2fr" class="option borderTB">
+                            {{__('massConvert.pound')}}
+                        </div>
                     </div>
                     <div class="borderLR">
-                        <div id="26.45547fr" class="option borderTB">兩(十錢)</div>
+                        <div id="1000fr" class="option borderTB">
+                            {{__('massConvert.gram')}}
+                        </div>
                     </div>
                     <div class="borderLR">
                         <div class="otherContainer borderTB">
                             <div class="otherOptionSelected">
-                                其他
+                                {{__('massConvert.else')}}
                             </div>
                             <svg id="chevron-down" width="14" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
                                 <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z "></path>
                             </svg>
                             <div class="otherOptionContainer">
                                 <div class="otherOptionCategory">
-                                    英制
+                                    {{__('massConvert.avoirdupoisUS')}}
                                 </div>
                                 <div id="0.000984fr" class="otherOption">
-                                    英噸
+                                    {{__('massConvert.longfrn')}}
+                                </div>
+                                <div id="2.2fr" class="otherOption">
+                                    {{__('massConvert.pound')}}
                                 </div>
                                 <div id="35.2739619fr" class="otherOption">
-                                    盎司(oz)
+                                    {{__('massConvert.ounce')}}
                                 </div>
                                 <div id="564.38fr" class="otherOption">
-                                    打蘭(dr)
+                                    {{__('massConvert.dram')}}
                                 </div>
                                 <div id="15432.36fr" class="otherOption">
-                                    格令(gr)
+                                    {{__('massConvert.grain')}}
                                 </div>
                                 <div class="otherOptionCategory">
-                                    公制
+                                    {{__('massConvert.metric')}}
                                 </div>
                                 <div id="0.001fr" class="otherOption">
-                                    公噸(t)
+                                    {{__('massConvert.frn')}}
+                                </div>
+                                <div id="1fr" class="otherOption">
+                                    {{__('massConvert.kilogram')}}
                                 </div>
                                 <div id="1000fr" class="otherOption">
-                                    公克(g)
+                                    {{__('massConvert.gram')}}
                                 </div>
                                 <div id="1000000fr" class="otherOption">
-                                    毫克(mg)
+                                    {{__('massConvert.milligram')}}
                                 </div>
                                 <div id="1000000000fr" class="otherOption">
-                                    微克(µg)
+                                    {{__('massConvert.microgram')}}
                                 </div>
                                 <div class="otherOptionCategory">
-                                    古東亞
-                                </div>
-                                <div id="0.0165346fr" class="otherOption">
-                                    擔
-                                </div>
-                                <div id="1.65346fr" class="otherOption">
-                                    斤
-                                </div>
-                                <div id="264.5547fr" class="otherOption">
-                                    錢
-                                </div>
-                                <div id="2645.547fr" class="otherOption">
-                                    分
-                                </div>
-                                <div id="26455.47fr" class="otherOption">
-                                    釐
-                                </div>
-                                <div id="264554.7fr" class="otherOption">
-                                    毫
-                                </div>
-                                <div id="2645547fr" class="otherOption">
-                                    絲
-                                </div>
-                                <div class="otherOptionCategory">
-                                    其他
+                                    {{__('massConvert.else')}}
                                 </div>
                                 <div id="0.6fr" class="otherOption">
-                                    台斤
+                                    {{__('massConvert.tw-catty')}}
+                                </div>
+                                <div id="1.65346fr" class="otherOption">
+                                    {{__('massConvert.china-catty')}}
+                                </div>
+                                <div id="26.45547fr" class="otherOption">
+                                    {{__('massConvert.tw-tael')}}
+                                </div>
+                                <div id="264.5547fr" class="otherOption">
+                                    {{__('massConvert.tw-mace')}}
+                                </div>
+                                <div id="2645.547fr" class="otherOption">
+                                    {{__('massConvert.tw-cadareen')}}
                                 </div>
                                 <div id="5000fr" class="otherOption">
-                                    克拉
+                                    {{__('massConvert.carat')}}
                                 </div>
                                 <div id="0.01fr" class="otherOption">
-                                    千牛頓(kN)
+                                    {{__('massConvert.kilonewton')}}
                                 </div>
                             </div>
                         </div>
@@ -99,7 +99,9 @@
                 </div>
                 <div class="resultContainer">
                     <input type="text" class="result from" value="1">
-                    <div class="selectedOption">公斤(kg)</div>
+                    <div class="selectedOption">
+                        {{__('massConvert.kilogram')}}
+                    </div>
                 </div>
             </div>
             <div class="transfer">
@@ -110,109 +112,111 @@
             <div class="block">
                 <div class="optionContainer">
                     <div class="borderLR">
-                        <div id="1to" class="option borderTB">公斤(kg)</div>
+                        <div id="1to" class="option borderTB">
+                            {{__('massConvert.kilogram')}}
+                        </div>
                     </div>
                     <div class="borderLR borderLRHover">
-                        <div id="2.2to" class="option borderTB borderTBHover">磅(lb)</div>
+                        <div id="2.2to" class="option borderTB borderTBHover">
+                            {{__('massConvert.pound')}}
+                        </div>
                     </div>
                     <div class="borderLR">
-                        <div id="26.45547to" class="option borderTB">兩(十錢)</div>
+                        <div id="1000to" class="option borderTB">
+                            {{__('massConvert.gram')}}
+                        </div>
                     </div>
                     <div class="borderLR">
                         <div class="otherContainer borderTB">
                             <div class="otherOptionSelected">
-                                其他
+                                {{__('massConvert.else')}}
                             </div>
                             <svg id="chevron-down" width="14" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentcolor">
                                 <path d="M1 12 L16 26 L31 12 L27 8 L16 18 L5 8 z "></path>
                             </svg>
                             <div class="otherOptionContainer">
                                 <div class="otherOptionCategory">
-                                    英制
+                                    {{__('massConvert.avoirdupoisUS')}}
                                 </div>
                                 <div id="0.000984to" class="otherOption">
-                                    英噸
+                                    {{__('massConvert.longTon')}}
+                                </div>
+                                <div id="2.2to" class="otherOption">
+                                    {{__('massConvert.pound')}}
                                 </div>
                                 <div id="35.2739619to" class="otherOption">
-                                    盎司(oz)
+                                    {{__('massConvert.ounce')}}
                                 </div>
                                 <div id="564.38to" class="otherOption">
-                                    打蘭(dr)
+                                    {{__('massConvert.dram')}}
                                 </div>
                                 <div id="15432.36to" class="otherOption">
-                                    格令(gr)
+                                    {{__('massConvert.grain')}}
                                 </div>
                                 <div class="otherOptionCategory">
-                                    公制
+                                    {{__('massConvert.metric')}}
                                 </div>
                                 <div id="0.001to" class="otherOption">
-                                    公噸(t)
+                                    {{__('massConvert.ton')}}
+                                </div>
+                                <div id="1to" class="otherOption">
+                                    {{__('massConvert.kilogram')}}
                                 </div>
                                 <div id="1000to" class="otherOption">
-                                    公克(g)
+                                    {{__('massConvert.gram')}}
                                 </div>
                                 <div id="1000000to" class="otherOption">
-                                    毫克(mg)
+                                    {{__('massConvert.milligram')}}
                                 </div>
                                 <div id="1000000000to" class="otherOption">
-                                    微克(µg)
+                                    {{__('massConvert.microgram')}}
                                 </div>
                                 <div class="otherOptionCategory">
-                                    古東亞
-                                </div>
-                                <div id="0.0165346to" class="otherOption">
-                                    擔
-                                </div>
-                                <div id="1.65346to" class="otherOption">
-                                    斤
-                                </div>
-                                <div id="264.5547to" class="otherOption">
-                                    錢
-                                </div>
-                                <div id="2645.547to" class="otherOption">
-                                    分
-                                </div>
-                                <div id="26455.47to" class="otherOption">
-                                    釐
-                                </div>
-                                <div id="264554.7to" class="otherOption">
-                                    毫
-                                </div>
-                                <div id="2645547to" class="otherOption">
-                                    絲
-                                </div>
-                                <div class="otherOptionCategory">
-                                    其他
+                                    {{__('massConvert.else')}}
                                 </div>
                                 <div id="0.6to" class="otherOption">
-                                    台斤
+                                    {{__('massConvert.tw-catty')}}
+                                </div>
+                                <div id="1.65346to" class="otherOption">
+                                    {{__('massConvert.china-catty')}}
+                                </div>
+                                <div id="26.45547to" class="otherOption">
+                                    {{__('massConvert.tw-tael')}}
+                                </div>
+                                <div id="264.5547to" class="otherOption">
+                                    {{__('massConvert.tw-mace')}}
+                                </div>
+                                <div id="2645.547to" class="otherOption">
+                                    {{__('massConvert.tw-cadareen')}}
                                 </div>
                                 <div id="5000to" class="otherOption">
-                                    克拉
+                                    {{__('massConvert.carat')}}
                                 </div>
                                 <div id="0.01to" class="otherOption">
-                                    千牛頓(kN)
+                                    {{__('massConvert.kilonewton')}}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="resultContainer">
-                    <input type="text" class="result to" value="1">
-                    <div class="selectedOption">磅(lb)</div>
+                    <input type="text" class="result to">
+                    <div class="selectedOption">
+                        {{__('massConvert.pound')}}
+                    </div>
                 </div>
             </div>
         </div>
          <div class="title">
-            重量換算
+            {{__('massConvert.massConvert')}}
         </div>
 
         <div class="description">
-            公制、英制、東亞古制
+            {{__('massConvert.description')}}
         </div>
     </div>
 @endsection
 
 @section('js')
-    @include('js.weightConvert')
+    @include('js.massConvert')
 @endsection
