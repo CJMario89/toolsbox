@@ -58,7 +58,7 @@
     position: absolute;
     bottom: -122px;
     left: 33px;
-    background: linear-gradient(to bottom, transparent 0%, transparent 5px, #ffffff 5px, #ffffff 100%);
+    background: linear-gradient(to bottom, transparent 0%, transparent 25px, #ffffff 25px, #ffffff 100%);
     box-shadow: 0px 5px 15px #9a9a9a; 
     opacity: 0;
     visibility: hidden;
