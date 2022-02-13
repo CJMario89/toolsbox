@@ -269,7 +269,7 @@
         transform: translateX(100%);
     }
     .optionText{
-        margin-left: 10px;
+        margin-left: 3px;
     }
     .optionExpand{
         display: block;

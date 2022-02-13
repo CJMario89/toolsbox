@@ -48,4 +48,13 @@ p{
     .description{
         font-size: 12px;
     }
+    /* global adjust*/
+    .result{
+        width: 180px !important;
+        height: 30px !important;
+    }
+    .input{
+        width: 180px !important;
+        height: 30px !important;
+    }
 }
