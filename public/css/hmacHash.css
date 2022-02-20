@@ -269,13 +269,21 @@
     background-color: black;
     box-shadow: 0px 0px 2px #9a9a9a;
 }
-.wrongInput::after{
+:lang(zh-TW) > .wrongInput::after{
     display: block;
     position: absolute;
     content: '格式不符';
-    top: 60%;
-    left: 10%;
-    transform: translate(-30px, -40px);
+    bottom: 0px;
+    right: 0px;
+    transform: translate(-100px, 25px);
+}
+:lang(en) > .wrongInput::after{
+    display: block;
+    position: absolute;
+    content: 'Invalid format';
+    bottom: 0px;
+    right: 0px;
+    transform: translate(-100px, 25px);
 }
 .otherOptionCategory{
     padding: 5px;

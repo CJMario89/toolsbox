@@ -16,4 +16,6 @@ return [
     'Hmac-hash' => 'Hmac-hash',
     'endecrypt' => 'Encrypt/Decrypt',
     'endecode' => 'Encode/Decode',
+    'formatConvert' => 'Format Convert',
+    'CsvToJson' => 'CSV to JSON',
 ];

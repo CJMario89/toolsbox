@@ -204,6 +204,12 @@
         e.stopPropagation();
     });
 
+    var CsvToJson = document.querySelector(".CsvToJson");
+    CsvToJson.addEventListener("click", function(e){
+        window.location = "{{url('CsvToJson')}}";
+        e.stopPropagation();
+    });
+
     var hash = document.querySelector(".hash");
     hash.addEventListener("click", function(e){
         window.location = "{{url('hash')}}";

@@ -57,6 +57,9 @@ Route::middleware(['guest', 'locale'])->group(function(){
         return view('endecrypt');
     });
 
+    Route::get('CsvToJson/', function () {
+        return view('CsvToJson');
+    });
 
     Route::get('setLocale/{locale}', [Language::class, 'setLanguage']);
 });
