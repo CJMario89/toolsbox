@@ -12,6 +12,6 @@ return [
     'none' => '無',
     'download' => '下載',
     'copy' => '複製到剪貼簿',
-    'CsvToJson' => 'CSV 轉 JSON',
+    'CsvToJson' => 'CSV 轉 JSON(未完成)',
     'description' => 'CSV格式的文字轉成JSON格式的文字',
 ];

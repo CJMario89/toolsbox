@@ -12,6 +12,6 @@ return [
     'none' => 'None',
     'download' => 'Download',
     'copy' => 'Copy to clipboard',
-    'CsvToJson' => 'CSV to JSON',
+    'CsvToJson' => 'CSV to JSON(unfinished)',
     'description' => 'CSV format string converts to JSON format string',
 ];

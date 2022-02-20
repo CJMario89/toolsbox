@@ -19,7 +19,6 @@ self.onmessage = function preProcessQuote(data){
             close();
         }
     }
-    console.log(worker);
     if(index == -1){
         self.postMessage(data);
         close();
