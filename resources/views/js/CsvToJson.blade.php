@@ -48,6 +48,10 @@
         try{
             //preProcessQuote(data, preQuote, postQuote);// [] {} "" ''
             const worker = new Worker("worker-js/preProcessQuoteWorker.js");
+            //
+            //progressing
+            //
+            //three.js
             if(quoteType == 'sBrackets'){
                 worker.postMessage([data, "[", "]"]);
             }else if(quoteType == 'cBrackets'){
@@ -103,7 +107,8 @@
     var headerKey = document.querySelector(".headerKey");
     var quoteType = document.querySelector(".quoteType");
     var uploadFile = document.querySelector(".uploadFile").querySelector("input");
-    var https = document.querySelector(".https");
+    //var https = document.querySelector(".https");
+    var fileName = '';
     var flag = 0;
     var carry = 0;
     var exampleObj = "name,age,birthday\nmario,24,{8,9}\nmarie,8,{1,12}";
@@ -142,6 +147,7 @@
 
     uploadFile.addEventListener("change", async function(){
         var data = await uploadFile.files[0].text();
+        fileName = uploadFile.files[0].name.split(".")[0];
         from.value = data;
         inputChange(2, data);
     });
@@ -151,6 +157,23 @@
         inputChange(3, https.value);
     }); --}}
 
+    var download = document.querySelector(".download");
+    download.addEventListener("click", function(){
+        var jsonContent = "data:text/json;charset=utf-8," + encodeURIComponent(to.value);
+        var link = document.createElement("a");
+        link.setAttribute("href", jsonContent);
+        if(fileName != ''){
+            link.setAttribute("download", fileName + ".json");
+        }else{
+            link.setAttribute("download", "toolsbox.json");
+        }
+        document.body.appendChild(link);
+        link.click();
+    });
 
+    var copy = document.querySelector(".copy");
+    copy.addEventListener("click", function(){
+        navigator.clipboard.writeText(to.value);
+    })
     
 </script>
