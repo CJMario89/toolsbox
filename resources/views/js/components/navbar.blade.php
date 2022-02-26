@@ -209,6 +209,11 @@
         window.location = "{{url('CsvToJson')}}";
         e.stopPropagation();
     });
+    var JsonToCsv = document.querySelector(".JsonToCsv");
+    JsonToCsv.addEventListener("click", function(e){
+        window.location = "{{url('JsonToCsv')}}";
+        e.stopPropagation();
+    });
 
     var hash = document.querySelector(".hash");
     hash.addEventListener("click", function(e){

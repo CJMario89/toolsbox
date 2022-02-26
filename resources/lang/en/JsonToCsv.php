@@ -1,8 +1,8 @@
 <?php
  
 return [
-    'input' => 'Input CSV',
-    'result' => 'Output JSON',
+    'input' => 'Input JSON',
+    'result' => 'Output CSV',
     'example' => 'Example : ',
     'or' => 'or',
     'uploadFile' => 'Upload file',
@@ -12,6 +12,6 @@ return [
     'none' => 'None',
     'download' => 'Download',
     'copy' => 'Copy to clipboard',
-    'CsvToJson' => 'CSV to JSON',
-    'description' => 'CSV format string converts to JSON format string',
+    'JsonToCsv' => 'JSON to CSV',
+    'description' => 'JSON format string converts to CSV format string',
 ];

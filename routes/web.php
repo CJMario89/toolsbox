@@ -60,6 +60,9 @@ Route::middleware(['guest', 'locale'])->group(function(){
     Route::get('CsvToJson/', function () {
         return view('CsvToJson');
     });
+    Route::get('JsonToCsv/', function () {
+        return view('JsonToCsv');
+    });
 
     Route::get('setLocale/{locale}', [Language::class, 'setLanguage']);
 });

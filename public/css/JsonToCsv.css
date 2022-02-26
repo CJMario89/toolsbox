@@ -1,0 +1,391 @@
+.container{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    font-size: 4vmin;
+}
+.tool{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    padding: 15px;
+    border: 3px solid #9a9a9a;
+    border-radius: 5px;
+    box-shadow: 0px 2px 10px #9a9a9a;
+    white-space: nowrap;
+    position: relative;
+}
+.description{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    margin-bottom: 100px;
+    margin: 50px;
+    margin-top: 35px;
+    line-height: 20px;
+    font-size: 12px;
+}
+.middlePanel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    width: calc(100% - 20px);
+    margin: 25px;
+}
+.middlePanel *{
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.uploadFile{
+    border: 1px solid black;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #9a9a9a;
+}
+.uploadFile input{
+    display: none;
+}
+.uploadFile:active{
+    box-shadow: 1px 1px 3px #9a9a9a;
+}
+.https{
+    width: 250px;
+    border: 1px solid black;
+    user-select: none;
+    box-shadow: 3px 3px 5px #9a9a9a;
+    font-size: 16px;
+}
+.bottomPanel{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    width: calc(100% - 20px);
+    margin: 25px;
+}
+.bottomPanel *{
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-right: 15px;
+    margin-left: 15px;
+    border: 1px solid black;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px #9a9a9a;
+}
+.convertOption{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    width: calc(100% - 20px);
+    margin: 25px;
+    margin-top: 0px;
+}
+.convertOptionCheckbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    opacity: 0;
+}
+.parseType{
+    margin: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+.headerKey{
+    margin: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+.quoteChar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    transform: translateX(-90px);
+}
+
+.inputBlock{
+    display: block;
+    width: calc(100% - 20px);
+    height: 30%;
+    border-radius: 5px;
+    border: 2px solid #9a9a9a;
+    box-shadow: 0px 1px 2px black;
+    font-size: 16px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    overflow-y: scroll;
+}
+.inputBlock::-webkit-scrollbar{
+    display: none;
+}
+.inputBlock:focus{
+    box-shadow: 0px 2px 6px black !important;
+}
+
+.otherContainer{
+    display: block;
+    padding: 4px;
+    padding-right: 25px;
+    padding-left: 8px;
+    user-select: none;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.otherContainer svg{
+    position: absolute;
+    right: 6px;
+    bottom: 3px;
+}
+
+.otherOptionContainer{
+    position: absolute;
+    box-shadow: 2px 2px 5px #9a9a9a;
+    left: -14px;
+    top: 23px;
+    margin-top: 4px;
+    background-color: #ffffff;
+    height: fit-content;
+    max-height: 155px;
+    overflow-y: scroll;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+    transition: all 0.5s;
+}
+.showOtherOptionContainer{
+    opacity: 1;
+    visibility: visible;
+}
+.otherOptionContainer::-webkit-scrollbar{
+    display: none;
+}
+.otherOption{
+    padding: 10px;
+    padding-right: 23px;
+    padding-left: 23px;
+}
+
+.borderTB::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0.5px;
+    width: 0%;
+    bottom: 0px;
+    left: 0px;
+    background-color: black;
+    transition: all 0.5s;
+}
+.borderTBHover::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0.5px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    background-color: black;
+    box-shadow: 0px 0px 2px #9a9a9a;
+}
+.borderTB::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0.5px;
+    width: 0%;
+    top: 0px;
+    right: 0px;
+    background-color: black;
+    transition: all 0.5s;
+}
+.borderTBHover::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0.5px;
+    width: 100%;
+    top: 0px;
+    right: 0px;
+    background-color: black;
+    box-shadow: 0px 0px 2px #9a9a9a;
+}
+.borderLR{
+    border-radius: 5px;
+    position: relative;
+    top: 26%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    height: 26px;
+    margin-left: 10px;
+}
+.borderTB{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.borderLR::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 0.5px;
+    height: 0%;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    transition: all 0.5s;
+}
+.borderLRHover::before{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 0.5px;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    box-shadow: 0px 0px 2px #9a9a9a;
+}
+.borderLR::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0%;
+    width: 0.5px;
+    bottom: 0px;
+    right: 0px;
+    background-color: black;
+    transition: all 0.5s;
+}
+.borderLRHover::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 0.5px;
+    bottom: 0px;
+    right: 0px;
+    background-color: black;
+    box-shadow: 0px 0px 2px #9a9a9a;
+}
+.wrongInput{
+    position: relative;
+}
+:lang(zh-TW) > .wrongInput::after{
+    display: block;
+    position: absolute;
+    content: '格式不符';
+    bottom: 0px;
+    right: 0px;
+    transform: translate(-222px, 25px);
+}
+:lang(en) > .wrongInput::after{
+    display: block;
+    position: absolute;
+    content: 'Invalid format';
+    bottom: 0px;
+    right: 0px;
+    transform: translate(-222px, 25px);
+}
+.otherOptionCategory{
+    padding: 5px;
+    font-size: 14px;
+    padding-right: 16px;
+    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.otherOptionCategory::before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    height: 0.5px;
+    width: 30%;
+    background-color: black;
+}
+.otherOptionCategory::after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    height: 0.5px;
+    width: 30%;
+    background-color: black;
+}
+
+
+@media screen and (max-width: 3000px){
+    .tool{
+        width: 500px;
+        height: 450px;
+        font-size: 18px;
+    }
+    .middlePanel, .bottomPanel{
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .tool{
+        width: 310px;
+        height: 480px;
+        font-size: 16px;
+    }
+    .middlePanel *{
+        margin-right: 3px;
+        margin-left: 3px;
+    }
+    .bottomPanel *{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .https{
+        width: 100px;
+    }
+    .convertOption{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .quoteChar{
+        margin-left: 0px;
+    }
+    .borderLR{
+        top: 58%;
+    }
+    .quoteChar{
+        transform: translateX(0px);
+    }
+}

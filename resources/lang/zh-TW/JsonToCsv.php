@@ -1,8 +1,8 @@
 <?php
  
 return [
-    'input' => '輸入CSV',
-    'result' => '輸出JSON',
+    'input' => '輸入JSON',
+    'result' => '輸出CSV',
     'example' => '範例 : ',
     'or' => '或',
     'uploadFile' => '上傳檔案',
@@ -12,6 +12,6 @@ return [
     'none' => '無',
     'download' => '下載',
     'copy' => '複製到剪貼簿',
-    'CsvToJson' => 'CSV 轉 JSON',
-    'description' => 'CSV格式的文字轉成JSON格式的文字',
+    'JsonToCsv' => 'JSON 轉 CSV',
+    'description' => 'JSON格式的文字轉成CSV格式的文字',
 ];
