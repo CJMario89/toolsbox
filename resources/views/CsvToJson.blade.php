@@ -8,7 +8,7 @@
 @section('content')
     <div class="container">
         <div class="tool">
-            <textarea class="inputBlock from" type="text" placeholder="{{__('CsvToJson.input')}}&#10;{{__("CsvToJson.example")}}&#10;name,age,birthday&#10;mario,24,{8,9}&#10;marrie,22,{1,12}"></textarea>
+            <textarea class="inputBlock from" type="text" placeholder="{{__('CsvToJson.input')}}&#10;&nbsp;{{__("CsvToJson.example")}}&#10;name,age,birthday&#10;mario,24,{8,9}&#10;marrie,22,{1,12}"></textarea>
             <div class="middlePanel">
                 <div class="or">
                     {{__('CsvToJson.or')}}
@@ -64,7 +64,7 @@
                     </div>
                 </label>
             </div>
-            <textarea class="inputBlock to" type="text" placeholder='{{__("CsvToJson.result")}}&#10;{{__("CsvToJson.example")}}&#10;' readonly></textarea>
+            <textarea class="inputBlock to" type="text" placeholder='{{__("CsvToJson.result")}}&#10;&nbsp;{{__("CsvToJson.example")}}&#10;' readonly></textarea>
             <div class="bottomPanel">
                 <div class="download">
                     {{__('CsvToJson.download')}}

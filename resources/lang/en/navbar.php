@@ -18,5 +18,5 @@ return [
     'endecode' => 'Encode/Decode',
     'formatConvert' => 'Format Convert',
     'CsvToJson' => 'CSV to JSON',
-    'CsvToJson' => 'JSON to CSV',
+    'JsonToCsv' => 'JSON to CSV',
 ];
