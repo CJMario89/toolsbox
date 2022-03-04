@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="{{asset('css/hash.css')}}">
     <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js"></script>   
     <embed class="license" src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/LICENSE">
+    <title>{{__('hash.hash')}}</title>
+    <meta name="description" content="{{__('hash.description')}}"/>
 @endsection
 
 @section('content')

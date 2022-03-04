@@ -67,3 +67,6 @@ Route::middleware(['guest', 'locale'])->group(function(){
     Route::get('setLocale/{locale}', [Language::class, 'setLanguage']);
 });
 
+Route::get('metaverse/', function () {
+    return view('metaverse');
+});

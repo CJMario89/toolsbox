@@ -2,6 +2,8 @@
 
 @section('head')
     <link rel="stylesheet" href="{{asset('css/lengthConvert.css')}}">
+    <title>{{__('lengthConvert.lengthConvert')}}</title>
+    <meta name="description" content="{{__('lengthConvert.description')}}"/>
 @endsection
 
 @section('content')

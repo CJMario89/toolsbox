@@ -2,6 +2,8 @@
 
 @section('head')
     <link rel="stylesheet" href="{{asset('css/positionalConvert.css')}}">
+    <title>{{__('positionalConvert.positionalConvert')}}</title>
+    <meta name="description" content="{{__('positionalConvert.description')}}"/>
 @endsection
 
 @section('content')

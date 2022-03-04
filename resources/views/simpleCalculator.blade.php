@@ -2,6 +2,8 @@
 
 @section('head')
     <link rel="stylesheet" href="{{asset('css/simpleCalculator.css')}}">
+    <title>{{__('simpleCalculator.simpleCalculator')}}</title>
+    <meta name="description" content="{{__('simpleCalculator.description')}}"/>
 @endsection
 
 @section('content')

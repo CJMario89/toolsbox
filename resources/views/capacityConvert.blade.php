@@ -2,6 +2,8 @@
 
 @section('head')
     <link rel="stylesheet" href="{{asset('css/capacityConvert.css')}}">
+    <title>{{__('capacityConvert.capacityConvert')}}</title>
+    <meta name="description" content="{{__('capacityConvert.description')}}"/>
 @endsection
 
 @section('content')

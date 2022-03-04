@@ -3,6 +3,8 @@
 @section('head')
     <link rel="stylesheet" href="{{asset('css/JsonToCsv.css')}}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
+    <title>{{__('JsonToCsv.JsonToCsv')}}</title>
+    <meta name="description" content="{{__('JsonToCsv.description')}}"/>
 @endsection
 
 @section('content')

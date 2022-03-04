@@ -2,6 +2,8 @@
 
 @section('head')
     <link rel="stylesheet" href="{{asset('css/exchangeRateConvert.css')}}">
+    <title>{{__('exchangeRateConvert.exchangeRateConvert')}}</title>
+    <meta name="description" content="{{__('exchangeRateConvert.description')}}"/>
 @endsection
 
 @section('content')

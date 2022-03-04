@@ -2,6 +2,8 @@
 
 @section('head')
     <link rel="stylesheet" href="{{asset('css/massConvert.css')}}">
+    <title>{{__('massConvert.massConvert')}}</title>
+    <meta name="description" content="{{__('massConvert.description')}}"/>
 @endsection
 
 @section('content')
