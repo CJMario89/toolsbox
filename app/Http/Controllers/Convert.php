@@ -22,7 +22,7 @@ class Convert extends Controller
                     $path = $file->storeAs('/public', $fileName, 'local');
                     $convert = "(cd ../storage/app/public && libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
                     shell_exec($convert);
-                    shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
+                    //shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
                     $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
                     return response()->json(['message','file not valid'], 300);
 
