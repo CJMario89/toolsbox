@@ -19,4 +19,5 @@ return [
     'formatConvert' => 'Format Convert',
     'CsvToJson' => 'CSV to JSON',
     'JsonToCsv' => 'JSON to CSV',
+    'fileConvert' => 'File Convert',
 ];

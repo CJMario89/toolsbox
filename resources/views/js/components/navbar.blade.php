@@ -239,5 +239,11 @@
         e.stopPropagation();
     });
 
+    var fileConvert = document.querySelector(".fileConvert");
+    fileConvert.addEventListener("click", function(e){
+        window.location = "{{url('fileConvert')}}";
+        e.stopPropagation();
+    });
+
 
 </script>

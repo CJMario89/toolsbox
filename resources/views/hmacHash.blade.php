@@ -3,7 +3,6 @@
 @section('head')
     <link rel="stylesheet" href="{{asset('css/hmacHash.css')}}">
     <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/crypto-js.js"></script>
-    <embed class="license" src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/LICENSE">
     <title>{{__('Hmac-hash.Hmac-hash')}}</title>
     <meta name="description" content="{{__('Hmac-hash.description')}}"/>
 @endsection
@@ -68,4 +67,5 @@
 
 @section('js')
     @include('js.hmacHash')
+    <embed class="license" src="https://cdn.jsdelivr.net/npm/crypto-js@4.0.0/LICENSE">
 @endsection

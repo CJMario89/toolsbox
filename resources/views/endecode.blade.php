@@ -3,7 +3,6 @@
 @section('head')
     <link rel="stylesheet" href="{{asset('css/endecode.css')}}">
     <script src="https://cdn.jsdelivr.net/npm/js-base64@3.7.2/base64.min.js"></script>
-    <embed class="license" src="https://cdn.jsdelivr.net/npm/js-base64@3.7.2/LICENSE.md">
     <title>{{__('endecode.endecode')}}</title>
     <meta name="description" content="{{__('endecode.description')}}"/>
 @endsection
@@ -60,4 +59,5 @@
 
 @section('js')
     @include('js.endecode')
+    <embed class="license" src="https://cdn.jsdelivr.net/npm/js-base64@3.7.2/LICENSE.md">
 @endsection

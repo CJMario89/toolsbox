@@ -108,6 +108,7 @@
         //render
         const renderer = new THREE.WebGLRenderer( { antialias: true } );
         renderer.setSize(window.innerWidth, 350);
+        renderer.setPixelRatio(window.devicePixelRatio);
         renderer.setClearColor(new THREE.Color('rgb(255,255,255)'));
         document.querySelector(".cubic").appendChild(renderer.domElement);
 

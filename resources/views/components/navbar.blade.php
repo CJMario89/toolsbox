@@ -169,6 +169,11 @@
                         {{__('navbar.JsonToCsv')}}
                     </div>
                 </div>
+                <div class="menuSubOption fileConvert">
+                    <div class="subOptionText">
+                        {{__('navbar.fileConvert')}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

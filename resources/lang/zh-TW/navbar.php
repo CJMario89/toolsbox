@@ -16,7 +16,8 @@ return [
     'Hmac-hash' => 'Hmac雜湊(Hmac-hash)',
     'endecrypt' => '加密解密(en/decrypt)',
     'endecode' => '編碼解碼(en/decode)',
+    'formatConvert' => '格式轉換',
     'CsvToJson' => 'CSV轉JSON',
     'JsonToCsv' => 'JSON轉CSV',
-    'formatConvert' => '格式轉換',
+    'fileConvert' => '檔案轉檔',
 ];
