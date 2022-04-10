@@ -22,17 +22,13 @@ class Convert extends Controller
                     $path = $file->storeAs('/public', $fileName, 'local');
                     $convert = "(cd ../storage/app/public && export HOME=/var/www/toolsbox/storage/app/public && libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
                     shell_exec($convert);
-                    return response()->json(['message','file not valid'], 200);
-
-                    //return response()->json(['message','file not valid'], 200);
-                    //shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
+                    shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
                     $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
-                    $convertedFile = file_get_contents("/tmp"."/".$fileName.".".$type);
+                    $convertedFile = file_get_contents(__DIR__."/../../../storage/app/public/".$fileName.".".$type);
 
                     $converted[$i]["fileName"] = $convertedfileName;
                     $converted[$i]["file"] = base64_encode($convertedFile);
-                    //shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
-                    //shell_exec("(cd ../storage/app/public/tmp && rm ".$fileName.".".$type.")");
+                    shell_exec("(cd ../storage/app/public/tmp && rm ".$fileName.".".$type.")");
                     $i++;
                 }
                 return response()->json($converted);
