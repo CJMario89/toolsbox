@@ -21,8 +21,8 @@ class Convert extends Controller
                     $fileName = $file->getSize();//using size as temporary filename //avoid race condition
                     $path = $file->storeAs('/public', $fileName, 'local');
                     $convert = "(cd ../storage/app/public/tmp && export HOME=/tmp && libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
-                    shell_exec($convert);
                     return response()->json(['message','file not valid'], 200);
+                    shell_exec($convert);
 
                     //return response()->json(['message','file not valid'], 200);
                     //shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
