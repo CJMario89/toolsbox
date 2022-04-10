@@ -124,7 +124,6 @@
                 'accept': 'application/json'
             })
         });
-        console.log(rawResponse);
         if(rawResponse.ok){
             const response = await rawResponse.json();
             for(var i = 0; i < response.length; i++){
