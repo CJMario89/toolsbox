@@ -23,8 +23,8 @@ class Convert extends Controller
                     $convert = "(cd ../storage/app/public && sudo libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
                     shell_exec($convert);
                     $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
-            return response()->json(['message','file not valid'], 300);
                     $convertedFile = file_get_contents(__DIR__."/../../../storage/app/public/".$fileName.".".$type);
+                    return response()->json(['message','file not valid'], 300);
                     $converted[$i]["fileName"] = $convertedfileName;
                     $converted[$i]["file"] = base64_encode($convertedFile);
                     shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
