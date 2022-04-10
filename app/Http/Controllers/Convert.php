@@ -21,6 +21,7 @@ class Convert extends Controller
                     $fileName = $file->getSize();//using size as temporary filename //avoid race condition
                     $path = $file->storeAs('/public', $fileName, 'local');
                     $convert = "(cd ../storage/app/public && sudo libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
+                    return response()->json(['message','file not valid'], 400);
                     shell_exec($convert);
                     $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
                     $convertedFile = file_get_contents(__DIR__."/../../../storage/app/public/".$fileName.".".$type);
