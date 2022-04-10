@@ -11,7 +11,7 @@ class Convert extends Controller
 {
     //
     public function convert(Request $request){
-        return response()->json(['message','file not valid'], 200);
+        return response()->json(['message','file not valid'], 300);
         $type = $request->query("type");
         try{
             if(1){
