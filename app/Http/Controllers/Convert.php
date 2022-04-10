@@ -19,7 +19,8 @@ class Convert extends Controller
                     $fileName = $file->getSize();//using size as temporary filename //avoid race condition
                     $path = $file->storeAs('/public', $fileName, 'local');
                     $convert = "(cd ../storage/app/public && libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
-                    shell_exec($convert);
+                    $m = shell_exec($convert);
+                    throw $m;
                     $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
                     $convertedFile = file_get_contents(__DIR__."/../../../storage/app/public/".$fileName.".".$type);
                     $converted[$i]["fileName"] = $convertedfileName;
@@ -34,7 +35,7 @@ class Convert extends Controller
                 return response()->json(['message','file not valid'], 200);
             }
         }catch(Exception $e){
-            return response()->json($e, 401);
+            return response()->json(['message',$e], 401);
         }
     }
 }
