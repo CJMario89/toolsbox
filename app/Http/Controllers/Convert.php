@@ -18,13 +18,14 @@ class Convert extends Controller
                 foreach($files as $file){
                     $fileName = $file->getSize();//using size as temporary filename //avoid race condition
                     $path = $file->storeAs('/public', $fileName, 'local');
-                    $convert = "libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ../storage/app/public/".$fileName;
+                    $convert = "(cd ../storage/app/public && libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
                     shell_exec($convert);
                     $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
-                    $convertedFile = file_get_contents(__DIR__."/../../../public/".$fileName.".".$type);
+                    $convertedFile = file_get_contents(__DIR__."/../../../storage/app/public/".$fileName.".".$type);
                     $converted[$i]["fileName"] = $convertedfileName;
                     $converted[$i]["file"] = base64_encode($convertedFile);
-                    shell_exec("rm ".$fileName.".".$type);
+                    shell_exec("rm ".$fileName);
+                    //shell_exec("rm ".$fileName.".".$type);
                     $i++;
                 }
                 return response()->json($converted);
