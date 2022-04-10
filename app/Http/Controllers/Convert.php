@@ -11,7 +11,6 @@ class Convert extends Controller
 {
     //
     public function convert(Request $request){
-        return response()->json(['message','file not valid'], 300);
         $type = $request->query("type");
         try{
             if(1){
@@ -21,6 +20,7 @@ class Convert extends Controller
                 foreach($files as $file){
                     $fileName = $file->getSize();//using size as temporary filename //avoid race condition
                     $path = $file->storeAs('/public', $fileName, 'local');
+            return response()->json(['message','file not valid'], 300);
                     $convert = "(cd ../storage/app/public && sudo libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
                     shell_exec($convert);
                     $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
