@@ -24,8 +24,9 @@ class Convert extends Controller
                     shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
                     shell_exec($convert);
                     $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
-                    $convertedFile = file_get_contents(__DIR__."/../../../storage/app/public/".$fileName.".".$type);
                     return response()->json(['message','file not valid'], 300);
+
+                    $convertedFile = file_get_contents(__DIR__."/../../../storage/app/public/".$fileName.".".$type);
                     $converted[$i]["fileName"] = $convertedfileName;
                     $converted[$i]["file"] = base64_encode($convertedFile);
                     shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
