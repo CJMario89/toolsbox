@@ -115,7 +115,6 @@
         }
         const url = "{{url('/api/fileConvert/convert')}}" + "?type=" + type;   
         progress.innerHTML = "{{__('fileConvert.converting')}}";
-        console.log(Data.get("files"))
         const rawResponse = await fetch(url,{
             method:"POST",
             body: Data,
@@ -125,6 +124,7 @@
                 'accept': 'application/json'
             })
         });
+        console.log(rawResponse);
         if(rawResponse.ok){
             const response = await rawResponse.json();
             for(var i = 0; i < response.length; i++){
