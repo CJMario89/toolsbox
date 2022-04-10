@@ -20,7 +20,7 @@ class Convert extends Controller
                     $path = $file->storeAs('/public', $fileName, 'local');
                     $convert = "(cd ../storage/app/public && libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
                     $m = shell_exec($convert);
-                    dd($m);
+                    throw new Exception($m);
                     $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
                     $convertedFile = file_get_contents(__DIR__."/../../../storage/app/public/".$fileName.".".$type);
                     $converted[$i]["fileName"] = $convertedfileName;
