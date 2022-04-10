@@ -20,7 +20,7 @@ class Convert extends Controller
                 foreach($files as $file){
                     $fileName = $file->getSize();//using size as temporary filename //avoid race condition
                     $path = $file->storeAs('/public', $fileName, 'local');
-                    $convert = "(cd ../storage/app/public/tmp && export HOME=/tmp && libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
+                    $convert = "(cd ../storage/app/public/tmp && libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
                     shell_exec($convert);
                     return response()->json(['message','file not valid'], 200);
 
