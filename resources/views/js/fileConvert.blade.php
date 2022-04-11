@@ -115,6 +115,8 @@
         }
         const url = "{{url('/api/fileConvert/convert')}}" + "?type=" + type;   
         progress.innerHTML = "{{__('fileConvert.converting')}}";
+        
+        Data.append("_token", '{{ csrf_token() }}');
         const rawResponse = await fetch(url,{
             method:"POST",
             body: Data,

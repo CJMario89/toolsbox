@@ -63,9 +63,10 @@
     font-size: 16px;
     line-height: 20px;
     height: 41%;
-    margin: 5px;
     width: 81%;
-    top: 20px;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
     border: 1px #9a9a9a solid;
     border-radius: 5px;
     box-shadow: 0 0 10px #9a9a9a;
@@ -161,7 +162,7 @@
     position: absolute;
     bottom: 20%;
     left: 15%;
-    width: 37px;
+    width: 36px;
     user-select: none;
     display: flex;
     flex-direction: column;
