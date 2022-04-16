@@ -55,7 +55,7 @@ class Convert extends Controller
 
     private function getFromFileFormate($type){
         if($type == "pdf"){
-            return "writer_pdf_Import";
+            return "writer_pdf_import";
         }else if($type == "docx"){
             return "MS Word 97";
         }else if($type == "odf"){
