@@ -30,7 +30,7 @@ class Convert extends Controller
 
                     $converted[$i]["fileName"] = $convertedfileName;
                     $converted[$i]["file"] = base64_encode($convertedFile);
-                    //shell_exec("(cd ../storage/app/public && rm ".$fileName.".".$type.")");
+                    shell_exec("(cd ../storage/app/public && rm ".$fileName.".".$type.")");
                     $i++;
                 }
                 return response()->json($converted);
@@ -55,7 +55,7 @@ class Convert extends Controller
 
     private function getFromFileFormate($type){
         if($type == "pdf"){
-            return "writer_pdf_Ixport";
+            return "writer_pdf_Import";
         }else if($type == "docx"){
             return "MS Word 2007 XML";
         }else if($type == "odf"){
