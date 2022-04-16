@@ -64,7 +64,7 @@
     line-height: 20px;
     height: 41%;
     width: 81%;
-    top: 30px;
+    top: 25px;
     left: 50%;
     transform: translateX(-50%);
     border: 1px #9a9a9a solid;
@@ -172,7 +172,7 @@
 .convertedFile{
     position: absolute;
     bottom: 4%;
-    left: 61%;
+    left: 63%;
     width: 180px;
     height: 120px;
     overflow: scroll;

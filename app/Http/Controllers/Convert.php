@@ -20,7 +20,9 @@ class Convert extends Controller
                 foreach($files as $file){
                     $fileName = $file->getSize();//using size as temporary filename //avoid race condition
                     $path = $file->storeAs('/public', $fileName, 'local');
-                    $convert = "(cd ../storage/app/public && export HOME=/var/www/toolsbox/storage/app/public && libreoffice --infilter=='writer_pdf_import' --headless --convert-to ".$type.":'writer_pdf_Export' ".$fileName.")";
+                    $from = $this->getFromFileFormate(explode('.', $file->getClientOriginalName())[1]);
+                    $to = $this->getToFileFormate($type);
+                    $convert = "(cd ../storage/app/public && export HOME=/var/www/toolsbox/storage/app/public && libreoffice --infilter='".$from."' --headless --convert-to ".$type.":'".$to."' ".$fileName.")";
                     shell_exec($convert);
                     shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
                     $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
@@ -38,6 +40,26 @@ class Convert extends Controller
             }
         }catch(Exception $e){
             return response()->json(['message',$e], 401);
+        }
+    }
+
+    private function getToFileFormate($type){
+        if($type == "pdf"){
+            return "writer_pdf_Export";
+        }else if($type == "docx"){
+            return "MS Word 2007 XML";
+        }else if($type == "odf"){
+            return "math8";
+        }
+    }
+
+    private function getFromFileFormate($type){
+        if($type == "pdf"){
+            return "writer_pdf_Ixport";
+        }else if($type == "docx"){
+            return "MS Word 2007 XML";
+        }else if($type == "odf"){
+            return "math8";
         }
     }
 }

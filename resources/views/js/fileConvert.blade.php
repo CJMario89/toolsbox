@@ -74,6 +74,7 @@
         tool.appendChild(uploadedFile);
         for(var i = 0; i < e.target.files.length; i++){
             document.querySelector(".uploadedFile").innerHTML += "<div>" + e.target.files[i].name + "</div>";
+            console.log(e.target.files[i]);
         }
         hint.innerHTML = "";
     });
