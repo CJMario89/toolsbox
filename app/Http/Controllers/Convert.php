@@ -47,7 +47,7 @@ class Convert extends Controller
         if($type == "pdf"){
             return "writer_pdf_Export";
         }else if($type == "docx"){
-            return "MS Word 2007 XML";
+            return "MS Word 97";
         }else if($type == "odf"){
             return "math8";
         }
@@ -57,7 +57,7 @@ class Convert extends Controller
         if($type == "pdf"){
             return "writer_pdf_Import";
         }else if($type == "docx"){
-            return "MS Word 2007 XML";
+            return "MS Word 97";
         }else if($type == "odf"){
             return "math8";
         }
