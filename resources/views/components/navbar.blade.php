@@ -169,7 +169,7 @@
                         {{__('navbar.JsonToCsv')}}
                     </div>
                 </div>
-                <div class="menuSubOption fileConvert">
+                <div class="menuSubOption fileConvert" style="display:none;">
                     <div class="subOptionText">
                         {{__('navbar.fileConvert')}}
                     </div>
