@@ -24,7 +24,7 @@ class Convert extends Controller
                     $to = $this->getToFileFormate($type);
                     $convert = "(cd ../storage/app/public && export HOME=/var/www/toolsbox/storage/app/public && libreoffice --infilter='".$from."' --headless --convert-to ".$type.":'".$to."' ".$fileName.")";
                     shell_exec($convert);
-                    shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
+                    //shell_exec("(cd ../storage/app/public && rm ".$fileName.")");
                     $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
                     $convertedFile = file_get_contents(__DIR__."/../../../storage/app/public/".$fileName.".".$type);
 
