@@ -230,6 +230,7 @@
     .uploadedFile{
         width: 77%;
         height: 45%;
+        top: 40px;
     }
     .convertedFile{
         width: 100px;
