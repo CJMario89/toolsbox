@@ -174,6 +174,11 @@
                         {{__('navbar.fileConvert')}}
                     </div>
                 </div>
+                <div class="menuSubOption WordToPDF">
+                    <div class="subOptionText">
+                        {{__('navbar.WordToPDF')}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

@@ -245,5 +245,11 @@
         e.stopPropagation();
     });
 
+    var WordToPDF = document.querySelector(".WordToPDF");
+    WordToPDF.addEventListener("click", function(e){
+        window.location = "{{url('WordToPDF')}}";
+        e.stopPropagation();
+    });
+
 
 </script>

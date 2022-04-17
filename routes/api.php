@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::any('/fileConvert/convert', [Convert::class, "convert"]);
+Route::any('/WordToPDF/convert', [Convert::class, "WordToPDF"]);

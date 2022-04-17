@@ -20,4 +20,5 @@ return [
     'CsvToJson' => 'CSV轉JSON',
     'JsonToCsv' => 'JSON轉CSV',
     'fileConvert' => '檔案轉檔',
+    'WordToPDF' => 'Word轉PDF',
 ];
