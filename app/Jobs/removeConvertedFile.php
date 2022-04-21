@@ -20,6 +20,7 @@ class removeConvertedFile implements ShouldQueue
      *
      * @return void
      */
+    public $fileToken;
     public function __construct($fileToken)
     {
         //

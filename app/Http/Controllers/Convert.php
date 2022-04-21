@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Carbon\Carbon;
+
+
+use App\Jobs\removeConvertedFile;
 
 use Exception;
 
@@ -45,7 +49,7 @@ class Convert extends Controller
 
     public function WordToPDF(Request $request){
         $type = $request->query("type");
-        try{
+        // try{
             $files = $request->file('files');
             $converted = array();
             $i = 0;
@@ -67,12 +71,12 @@ class Convert extends Controller
                 $converted[$i]["file"] = $convertedFile;
                 //shell_exec("(cd ../storage/app/public && rm ".$fileName.".".$type.")");
                 $i++;
+                dispatch(new removeConvertedFile($dir))->delay(Carbon::now()->addMinutes(10));
             }
             return response()->json($converted);
-            
-        }catch(Exception $e){
-            return response()->json(['message',$e], 401);
-        }
+        // }catch(Exception $e){
+        //     return response()->json(['message',$e], 401);
+        // }
     }
 
     private function getRandomString(){
