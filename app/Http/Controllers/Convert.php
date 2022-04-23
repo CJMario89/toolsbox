@@ -71,7 +71,7 @@ class Convert extends Controller
                 $converted[$i]["file"] = $convertedFile;
                 //shell_exec("(cd ../storage/app/public && rm ".$fileName.".".$type.")");
                 $i++;
-                dispatch(new removeConvertedFile($dir))->delay(Carbon::now()->addSeconds(30));
+                dispatch(new removeConvertedFile($dir))->delay(Carbon::now()->addMinutes(10));
             }
             return response()->json($converted);
         // }catch(Exception $e){
