@@ -124,20 +124,28 @@
 
     var locale = document.querySelector(".locale");
     var languageTimeout;
+    var languageOpenFlag = 0;
     locale.addEventListener("mouseenter", function(){
         clearTimeout(languageTimeout);
         document.querySelector(".otherLanguageContainer").classList.add("showOtherLanguageContainer");
         document.querySelector(".chevron").classList.add("chevronRotate");
     });
     locale.addEventListener("click", function(){
-        document.querySelector(".otherLanguageContainer").classList.add("showOtherLanguageContainer");
-        document.querySelector(".chevron").classList.add("chevronRotate");
-        window.addEventListener("click", function(e){
-            if(!e.target.closest(".locale")){
-                document.querySelector(".otherLanguageContainer").classList.remove("showOtherLanguageContainer");
-                document.querySelector(".chevron").classList.remove("chevronRotate");
-            }
-        });
+        if(languageOpenFlag == 0){
+            document.querySelector(".otherLanguageContainer").classList.add("showOtherLanguageContainer");
+            document.querySelector(".chevron").classList.add("chevronRotate");
+            window.addEventListener("click", function(e){
+                if(!e.target.closest(".locale")){
+                    document.querySelector(".otherLanguageContainer").classList.remove("showOtherLanguageContainer");
+                    document.querySelector(".chevron").classList.remove("chevronRotate");
+                }
+            });
+            languageOpenFlag = 1;
+        }else{
+            document.querySelector(".otherLanguageContainer").classList.remove("showOtherLanguageContainer");
+            document.querySelector(".chevron").classList.remove("chevronRotate");
+            languageOpenFlag = 0;
+        }
     });
     locale.addEventListener("mouseleave", function(){
         languageTimeout = setTimeout(
