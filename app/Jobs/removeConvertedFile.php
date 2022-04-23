@@ -35,8 +35,7 @@ class removeConvertedFile implements ShouldQueue
     public function handle()
     {
         //
-        $shell = shell_exec("cd storage && ls && rm -r ".$this->fileToken);
-        echo $shell;
+        shell_exec("cd public/storage && rm -r ".$this->fileToken);
         $convertedFileNum = parameter::where("key", "convertedFileNum")->first();
         $convertedFileNum->value = $convertedFileNum->value + 1;
         $convertedFileNum->save();
