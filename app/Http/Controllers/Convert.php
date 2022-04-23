@@ -57,6 +57,7 @@ class Convert extends Controller
                 $dir = $this->getRandomString();
                 $fileName = $file->getClientOriginalName();
                 $fileName = $this->fileNamePreProcess($fileName);
+                shell_exec("(cd ../storage/app/public/ && mkdir -m 775 ".$dir.")");
                 $path = $file->storeAs('/public'."/".$dir, $fileName, 'local');
                 $from = $this->getFromFileFormate(explode('.', $file->getClientOriginalName())[1]);
                 $to = $this->getToFileFormate($type);
