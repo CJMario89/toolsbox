@@ -129,7 +129,7 @@ class Convert extends Controller
     private function getToFileFormate($type){
         if($type == "pdf"){
             return "writer_pdf_Export";
-        }else if($type == "docx"){
+        }else if($type == "docx" || $type == "doc"){
             return "MS Word 97";
         }else if($type == "odf"){
             return "math8";
@@ -139,7 +139,7 @@ class Convert extends Controller
     private function getFromFileFormate($type){
         if($type == "pdf"){
             return "writer_pdf_import";
-        }else if($type == "docx"){
+        }else if($type == "docx" || $type == "doc"){
             return "MS Word 97";
         }else if($type == "odf"){
             return "math8";
