@@ -21,10 +21,11 @@ class removeConvertedFile implements ShouldQueue
      * @return void
      */
     public $fileToken;
-    public function __construct($fileToken)
+    public function __construct($fileToken, $type)
     {
         //
         $this->fileToken = $fileToken;
+        $this->type = $type;
     }
 
     /**
@@ -36,7 +37,7 @@ class removeConvertedFile implements ShouldQueue
     {
         //
         shell_exec("cd public/storage && rm -r ".$this->fileToken);
-        $convertedFileNum = parameter::where("key", "convertedFileNum")->first();
+        $convertedFileNum = parameter::where("key", $this->type)->first();
         $convertedFileNum->value = $convertedFileNum->value + 1;
         $convertedFileNum->save();
         return;

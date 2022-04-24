@@ -179,6 +179,11 @@
                         {{__('navbar.WordToPDF')}}
                     </div>
                 </div>
+                <div class="menuSubOption PDFToWord">
+                    <div class="subOptionText">
+                        {{__('navbar.PDFToWord')}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

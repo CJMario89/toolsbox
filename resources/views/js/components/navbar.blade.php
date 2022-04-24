@@ -259,5 +259,11 @@
         e.stopPropagation();
     });
 
+    var PDFToWord = document.querySelector(".PDFToWord");
+    PDFToWord.addEventListener("click", function(e){
+        window.location = "{{url('PDFToWord')}}";
+        e.stopPropagation();
+    });
+
 
 </script>

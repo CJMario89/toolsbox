@@ -71,7 +71,39 @@ class Convert extends Controller
                 $converted[$i]["file"] = $convertedFile;
                 //shell_exec("(cd ../storage/app/public && rm ".$fileName.".".$type.")");
                 $i++;
-                dispatch(new removeConvertedFile($dir))->delay(Carbon::now()->addMinutes(10));
+                dispatch(new removeConvertedFile($dir, "WordToPDF"))->delay(Carbon::now()->addMinutes(10));
+            }
+            return response()->json($converted);
+        // }catch(Exception $e){
+        //     return response()->json(['message',$e], 401);
+        // }
+    }
+
+    public function PDFToWord(Request $request){
+        $type = $request->query("type");
+        // try{
+            $files = $request->file('files');
+            $converted = array();
+            $i = 0;
+            foreach($files as $file){
+                $dir = $this->getRandomString();
+                $fileName = $file->getClientOriginalName();
+                $fileName = $this->fileNamePreProcess($fileName);
+                $path = $file->storeAs('/public'."/".$dir, $fileName, 'local');
+                $from = $this->getFromFileFormate(explode('.', $file->getClientOriginalName())[1]);
+                $to = $this->getToFileFormate($type);
+                $convert = "(cd ../storage/app/public/".$dir." && export HOME=/var/www/toolsbox/storage/app/public/".$dir." && libreoffice --infilter='".$from."' --headless --convert-to ".$type.":'".$to."' '".$fileName."')";
+                shell_exec($convert);
+                //shell_exec("(cd ../storage/app/public/".$dir." && rm '".$fileName."')");
+                $convertedfileName = explode('.', $file->getClientOriginalName())[0].".".$type;
+                //$convertedFile = file_get_contents(__DIR__."/../../../storage/app/public/".$fileName.".".$type);
+                $convertedFile = url('/storage')."/".$dir."/".explode('.', $file->getClientOriginalName())[0].".".$type;
+
+                $converted[$i]["fileName"] = $convertedfileName;
+                $converted[$i]["file"] = $convertedFile;
+                //shell_exec("(cd ../storage/app/public && rm ".$fileName.".".$type.")");
+                $i++;
+                dispatch(new removeConvertedFile($dir, "PDFToWord"))->delay(Carbon::now()->addMinutes(10));
             }
             return response()->json($converted);
         // }catch(Exception $e){

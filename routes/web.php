@@ -71,6 +71,10 @@ Route::middleware(['guest', 'locale'])->group(function(){
         return view('WordToPDF');
     });
 
+    Route::get('PDFToWord/', function () {
+        return view('PDFToWord');
+    });
+
     Route::get('setLocale/{locale}', [Language::class, 'setLanguage']);
 });
 
