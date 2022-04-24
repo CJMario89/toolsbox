@@ -86,7 +86,7 @@
     //response pdf, odf, doc(x) //converting
     //display //done
     async function post_file(){
-        type = "pdf";
+        type = "doc";
         Type = fileTypes[0];
         const url = "{{url('/api/PDFToWord/convert')}}" + "?type=" + type;   
         progress.innerHTML = "{{__('PDFToWord.converting')}}";
