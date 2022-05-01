@@ -22,4 +22,6 @@ return [
     'fileConvert' => 'File Convert',
     'WordToPDF' => 'Word to PDF',
     'PDFToWord' => 'PDF to Word',
+    'ExcelToPDF' => 'Excel to PDF',
+    'PDFToExcel' => 'PDF to Excel',
 ];

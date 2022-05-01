@@ -184,6 +184,11 @@
                         {{__('navbar.PDFToWord')}}
                     </div>
                 </div>
+                <div class="menuSubOption ExcelToPDF">
+                    <div class="subOptionText">
+                        {{__('navbar.ExcelToPDF')}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>

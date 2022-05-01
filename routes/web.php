@@ -75,6 +75,10 @@ Route::middleware(['guest', 'locale'])->group(function(){
         return view('PDFToWord');
     });
 
+    Route::get('ExcelToPDF/', function () {
+        return view('ExcelToPDF');
+    });
+
     Route::get('setLocale/{locale}', [Language::class, 'setLanguage']);
 });
 

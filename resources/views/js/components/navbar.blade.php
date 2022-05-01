@@ -266,4 +266,12 @@
     });
 
 
+    var ExcelToPDF = document.querySelector(".ExcelToPDF");
+    ExcelToPDF.addEventListener("click", function(e){
+        window.location = "{{url('ExcelToPDF')}}";
+        e.stopPropagation();
+    });
+
+
+
 </script>

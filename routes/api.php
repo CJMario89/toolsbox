@@ -22,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::any('/fileConvert/convert', [Convert::class, "convert"]);
 Route::any('/WordToPDF/convert', [Convert::class, "WordToPDF"]);
 Route::any('/PDFToWord/convert', [Convert::class, "PDFToWord"]);
+Route::any('/ExcelToPDF/convert', [Convert::class, "ExcelToPDF"]);

@@ -110,6 +110,9 @@
                 a.innerHTML = decodeURI(response[i]["fileName"]);//"" ? ... decode
                 convertedFile.appendChild(a);
                 a.href = response[i]["file"];
+                if(window.innerWidth > 768){
+                    a.target = "_blank";
+                }
                 a.id = decodeURI(response[i]["fileName"]);//"" ? ... decode
             }
 

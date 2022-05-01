@@ -22,4 +22,6 @@ return [
     'fileConvert' => '檔案轉檔',
     'WordToPDF' => 'Word轉PDF',
     'PDFToWord' => 'PDF轉Word',
+    'ExcelToPDF' => 'Excel轉PDF',
+    'PDFToExcel' => 'PDF轉Excel',
 ];
