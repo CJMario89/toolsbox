@@ -9,6 +9,6 @@ return [
     'done' => 'Done',
     'formatNotMatch' => 'Unsupported format.',
     'hint' => 'Choose a file first',
-    'WordToPDF' => 'Word To PDF',
-    'description' => 'Convert Word to PDF',
+    'ExcelToPDF' => 'Excel To PDF',
+    'description' => 'Convert Excel PDF',
 ];
