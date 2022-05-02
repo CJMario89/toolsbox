@@ -88,7 +88,7 @@
     color: black;
     z-index: 5;
     font-size: 16px;
-    overflow: scroll;
+    overflow: hidden;
 }
 .optionText{
     display: flex;
@@ -268,6 +268,7 @@
         visibility: hidden;
         transition: all 0.8s;
         transform: translateX(100%);
+        overflow: scroll;
     }
     .optionText{
         margin-left: 3px;
