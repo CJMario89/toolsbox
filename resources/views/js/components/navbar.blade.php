@@ -71,17 +71,17 @@
     }
 
     window.addEventListener("resize", function(){
-        var menuSubOptionContainers = document.querySelectorAll(".menuSubOptionContainer");
-        for(var i = 0; i < menuSubOptionContainers.length; i++){
-            menuSubOptionContainers[i].classList.remove("showDesktopSubOption");
-            menuSubOptionContainers[i].classList.remove("showMobileSubOption");
-            menuSubOptionContainers[i].style.height = "0px";
-        }
-        var optionExpands = document.querySelectorAll(".optionExpand");
-        for(var i = 0; i < optionExpands.length; i++){
-            optionExpands[i].classList.remove("chevronRotate");
-        }
         if(window.innerWidth > 700){
+            var menuSubOptionContainers = document.querySelectorAll(".menuSubOptionContainer");
+            for(var i = 0; i < menuSubOptionContainers.length; i++){
+                menuSubOptionContainers[i].classList.remove("showDesktopSubOption");
+                menuSubOptionContainers[i].classList.remove("showMobileSubOption");
+                menuSubOptionContainers[i].style.height = "0px";
+            }
+            var optionExpands = document.querySelectorAll(".optionExpand");
+            for(var i = 0; i < optionExpands.length; i++){
+                optionExpands[i].classList.remove("chevronRotate");
+            }
             menu.classList.remove("showMenu");
         }
     });
