@@ -81,7 +81,9 @@
         for(var i = 0; i < optionExpands.length; i++){
             optionExpands[i].classList.remove("chevronRotate");
         }
-        menu.classList.remove("showMenu");
+        if(window.innerWidth > 700){
+            menu.classList.remove("showMenu");
+        }
     });
 
     function closeOtherOption(){
