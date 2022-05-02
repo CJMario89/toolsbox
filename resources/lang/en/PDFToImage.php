@@ -10,5 +10,5 @@ return [
     'formatNotMatch' => 'Unsupported format.',
     'hint' => 'Choose a file first',
     'PDFToImage' => 'PDF to Image',
-    'description' => 'Convert PDF to Image',
+    'description' => 'Convert PDF to Image, Convert PDF to JPG, Convert PDF to PNG',
 ];

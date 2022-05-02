@@ -10,5 +10,5 @@ return [
     'converting' => '轉檔中',
     'done' => '完成',
     'WordToImage' => 'Word 轉 Image',
-    'description' => 'Word 轉 Image',
+    'description' => 'Word 轉 Image, Word 轉 JPG, Word 轉 PNG',
 ];

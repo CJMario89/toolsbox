@@ -10,5 +10,5 @@ return [
     'converting' => '轉檔中',
     'done' => '完成',
     'PDFToImage' => 'PDF 轉 Image',
-    'description' => 'PDF 轉 Image',
+    'description' => 'PDF 轉 Image, PDF 轉 JPG, PDF 轉 PNG',
 ];

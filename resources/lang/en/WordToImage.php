@@ -10,5 +10,5 @@ return [
     'formatNotMatch' => 'Unsupported format.',
     'hint' => 'Choose a file first',
     'WordToImage' => 'Word to Image',
-    'description' => 'Convert Word to Image',
+    'description' => 'Convert Word to Image, Convert Word to JPG, Convert Word to PNG',
 ];
