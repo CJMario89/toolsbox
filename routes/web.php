@@ -79,6 +79,14 @@ Route::middleware(['guest', 'locale'])->group(function(){
         return view('ExcelToPDF');
     });
 
+    Route::get('PDFToImage/', function () {
+        return view('PDFToImage');
+    });
+
+    Route::get('WordToImage/', function () {
+        return view('WordToImage');
+    });
+
     Route::get('setLocale/{locale}', [Language::class, 'setLanguage']);
 });
 

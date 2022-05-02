@@ -272,6 +272,18 @@
         e.stopPropagation();
     });
 
+    var PDFToImage = document.querySelector(".PDFToImage");
+    PDFToImage.addEventListener("click", function(e){
+        window.location = "{{url('PDFToImage')}}";
+        e.stopPropagation();
+    });
+
+     var WordToImage = document.querySelector(".WordToImage");
+    WordToImage.addEventListener("click", function(e){
+        window.location = "{{url('WordToImage')}}";
+        e.stopPropagation();
+    });
+
 
 
 </script>

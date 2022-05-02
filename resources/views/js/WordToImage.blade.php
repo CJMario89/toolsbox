@@ -11,6 +11,24 @@
     var tool = document.querySelector(".tool");
     
 
+    fileFormatContainer.addEventListener("click", function(){
+        otherFormat.classList.add("showContainer");
+        window.addEventListener("click", function(e){
+            if(e.target.closest(".fileFormatContainer") == undefined){
+                otherFormat.classList.remove("showContainer");
+            }
+        });
+    });
+
+    var formats = document.querySelectorAll(".format");
+    for(var i = 0; i < formats.length; i++){
+        formats[i].addEventListener("click", function(e){
+            e.stopPropagation();
+            formatSelected.innerHTML = e.target.innerHTML;
+            formatSelected.id = e.target.id;
+            otherFormat.classList.remove("showContainer");
+        });
+    }
 
     file.addEventListener('dragover', function(e) {
         e.stopPropagation();
@@ -24,7 +42,7 @@
     var type;
     var Type;
     var Data;
-    fileTypes.push("application/pdf");//pdf
+    fileTypes.push("application/vnd.openxmlformats-officedocument.wordprocessingml.document");//docx
 
     file.addEventListener('drop', function(e) {
         e.stopPropagation();
@@ -61,10 +79,10 @@
 
     upload.addEventListener("click", function(){
         if(Data != undefined){
-            progress.innerHTML = "{{__('PDFToWord.uploading')}}";
+            progress.innerHTML = "{{__('WordToImage.uploading')}}";
             post_file();
         }else{
-            hint.innerHTML = "{{__('PDFToWord.hint')}}";
+            hint.innerHTML = "{{__('WordToImage.hint')}}";
         }  
     });
 
@@ -86,10 +104,10 @@
     //response pdf, odf, doc(x) //converting
     //display //done
     async function post_file(){
-        type = "doc";
+        type = formatSelected.id;
         Type = fileTypes[0];
-        const url = "{{url('/api/PDFToWord/convert')}}" + "?type=" + type;   
-        progress.innerHTML = "{{__('PDFToWord.converting')}}";
+        const url = "{{url('/api/WordToImage/convert')}}" + "?type=" + type;   
+        progress.innerHTML = "{{__('WordToImage.converting')}}";
         
         //Data.append("_token", '{{ csrf_token() }}');
 
@@ -116,7 +134,7 @@
                 a.id = decodeURI(response[i]["fileName"]);//"" ? ... decode
             }
 
-            progress.innerHTML = "{{__('PDFToWord.done')}}";
+            progress.innerHTML = "{{__('WordToImage.done')}}";
         }else{
             //format not match
             const response = await rawResponse.json();
@@ -163,7 +181,7 @@
     function play(time){
         requestAnimationFrame(play);
         renderer.render(scene, camera);
-        if(progress.innerHTML == "{{__('PDFToWord.uploading')}}" || progress.innerHTML == "{{__('PDFToWord.converting')}}"){
+        if(progress.innerHTML == "{{__('WordToImage.uploading')}}" || progress.innerHTML == "{{__('WordToImage.converting')}}"){
             sphere.position.x = 1.2 * Math.cos(time / 500);
             sphere.position.y = 1.2 * Math.sin(time / 500) - 0.3;
             sphere.position.z = 1.5 * Math.sin(time / 500);

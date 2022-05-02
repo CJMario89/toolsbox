@@ -23,5 +23,6 @@ return [
     'WordToPDF' => 'Word to PDF',
     'PDFToWord' => 'PDF to Word',
     'ExcelToPDF' => 'Excel to PDF',
-    'PDFToExcel' => 'PDF to Excel',
+    'PDFToImage' => 'PDF to Image',
+    'WordToImage' => 'Word to Image',
 ];

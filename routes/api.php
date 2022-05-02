@@ -19,7 +19,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::any('/fileConvert/convert', [Convert::class, "convert"]);
-Route::any('/WordToPDF/convert', [Convert::class, "WordToPDF"]);
-Route::any('/PDFToWord/convert', [Convert::class, "PDFToWord"]);
-Route::any('/ExcelToPDF/convert', [Convert::class, "ExcelToPDF"]);
+Route::post('/fileConvert/convert', [Convert::class, "convert"]);
+Route::post('/WordToPDF/convert', [Convert::class, "WordToPDF"]);
+Route::post('/PDFToWord/convert', [Convert::class, "PDFToWord"]);
+Route::post('/ExcelToPDF/convert', [Convert::class, "ExcelToPDF"]);
+Route::post('/PDFToImage/convert', [Convert::class, "PDFToImage"]);
+Route::post('/WordToImage/convert', [Convert::class, "WordToImage"]);

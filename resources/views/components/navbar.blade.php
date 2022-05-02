@@ -189,6 +189,16 @@
                         {{__('navbar.ExcelToPDF')}}
                     </div>
                 </div>
+                <div class="menuSubOption PDFToImage">
+                    <div class="subOptionText">
+                        {{__('navbar.PDFToImage')}}
+                    </div>
+                </div>
+                <div class="menuSubOption WordToImage">
+                    <div class="subOptionText">
+                        {{__('navbar.WordToImage')}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
