@@ -194,7 +194,7 @@
         flex-wrap: wrap;
         box-shadow: -10px 10px 20px #636363;
         transition: all 0.5s;
-        overflow: scroll;
+        overflow: hidden;
         background: linear-gradient(to bottom, transparent 0%, transparent 5px, white 5px, white 100%);
     }
     .menuSubOption{
