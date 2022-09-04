@@ -93,3 +93,7 @@ Route::middleware(['guest', 'locale'])->group(function(){
 Route::get('metaverse/', function () {
     return view('metaverse');
 });
+
+Route::get('web3/', function () {
+    return view('web3');
+});
